@@ -1,0 +1,265 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="AM Proposal Builder" />
+	<meta name="author" content="Mike Rundle" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <link rel="stylesheet" href="https://square-fonts-production-f.squarecdn.com/square-sans.min.css" /> -->
+
+	<link rel="stylesheet" type="text/css" href="css/builder.css" />
+	<script type="text/javascript">
+
+
+
+	</script>
+	<script src="scripts/common.js"></script>
+	<script src="scripts/builder.js"></script>
+</head>
+<body>
+	<header>
+		<h1>AM Proposal Generator</h1>
+	</header>
+	<div class="sidebar">
+		<p class="explanation">
+			As you enter data below, your generated proposal on the right will automatically update. To save
+			this proposal, <strong>Print</strong> this webpage and choose <strong>Save as PDF</strong>.
+		</p>
+
+		<section class="customization clearfix">
+			<h2>Customization <img src="css/images/caret-down.svg" alt="Collapse section" /></h2>
+			<a href="#" class="blue selected"><span></span></a>
+			<a href="#" class="black reversed"><span></span></a>
+			<a href="#" class="green reversed"><span></span></a>
+			<a href="#" class="yellow"><span></span></a>
+			<a href="#" class="orange reversed"><span></span></a>
+			<a href="#" class="pink"><span></span></a>
+			<a href="#" class="cocoa reversed"><span></span></a>
+		</section>
+
+		<section class="introduction">
+			<h2>Introduction <img src="css/images/caret-down.svg" alt="Collapse section" /></h2>
+			<p class="open">This will appear at the top of the proposal so you can personalize it for each seller.</p>
+			<ul class="clearfix open">
+				<li class="full">
+					<label>Merchant name</label>
+					<input class="merchant-name" type="text" value="" />
+				</li>
+				<li class="full">
+					<label>Greeting</label>
+					<textarea class="greeting"></textarea>
+				</li>
+				<li class="half">
+					<label>Your email</label>
+					<input class="your-email" type="text" value="" />
+				</li>
+				<li class="half last">
+					<label>Your phone number</label>
+					<input class="your-phone-number" type="text" value="" />
+				</li>
+			</ul>
+		</section>
+
+		<section class="proposal-item" id="393240234234">
+			<h2>Proposal item <img src="css/images/caret-down.svg" alt="Collapse section" /></h2>
+			<h3 class="product-name">Square Register</h3>
+			<ul class="clearfix">
+				<li class="full dropdown">
+					<label for="item-name">Product or service</label>
+					<select name="item-name" class="item-name">
+						<optgroup label="Hardware">
+							<option selected="selected">Square Register</option>
+							<option>Square Terminal</option>
+							<option>Square Stand</option>
+							<option>Square Stand Mount</option>
+							<option>Square Reader</option>
+						</optgroup>
+						<optgroup label="Services">
+							<option>Square Point of Sale</option>
+							<option>Square Online</option>
+							<option>Square for Restaurants</option>
+							<option>Square for Retail</option>
+							<option>Square Appointments</option>
+							<option>Square Payroll</option>
+							<option>Square Invoices</option>
+							<option>Square Payments</option>
+							<option>Square Marketing</option>
+							<option>Square Messages</option>
+							<option>Square Loyalty</option>
+							<option>Square Banking</option>
+						</optgroup>
+					</select>
+				</li>
+				<li class="half">
+					<label for="rate">Rate</label>
+					<input class="rate" name="rate" type="text" value="" />
+				</li>
+				<li class="half last">
+					<label for="quantity">Quantity</label>
+					<input class="quantity" name="quantity" type="text" value="1" />
+				</li>
+				<li class="half">
+					<label for="price">Price</label>
+					<input class="price" name="price" type="text" value="$999" />
+				</li>
+				<li class="half last">
+					<label for="total">Total</label>
+					<input class="total" name="total" type="text" value="$999" />
+				</li>
+				<li class="full">
+					<label for="comments">Comments</label>
+					<textarea class="textarea-comments" name="comments"></textarea>
+				</li>
+			</ul>
+			<div class="buttons">
+				<button class="add">Add item</button>
+				<button class="remove">Remove this item</button>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="preview-outer">
+		<div class="preview">
+			<div class="masthead blue">
+				<div class="jewel">Square</div>
+				<div class="merchant-name" data-default="Merchant name">Merchant name</div>
+				<div class="masthead-inner">
+					<h4 class="preview-greeting" data-default="Greeting goes here!">
+						Greeting goes here!
+						<!-- Sara,<br /><br />
+						Here's a proposal that captures the new setup we talked about earlier this afternoon.<br /><br />
+						Thanks!<br />
+						Drake -->
+					</h4>		
+					<div class="contact-details">
+						<h5 class="email" data-default="email@squareup.com"><a href="mailto:email@squareup.com">email@squareup.com</a></h5>
+						<h5 class="phone" data-default="(123) 456-7890"><a href="tel:(123) 456-7890">(123) 456-7890</a></h5>
+					</div> <!-- /contact-details -->
+				</div> <!-- /masthead-inner -->
+			</div> <!-- /masthead -->
+
+			<div class="preview-items">
+
+				<div id="preview-393240234234" class="preview-item hardware register clearfix">
+					<img src="css/images/products/register@2x.png" />
+					<h3 class="name">
+						Square Register
+						<small class="comments"></small>
+					</h3>
+					<ul class="details">
+						<li class="rate" style="display: none;">
+							<small>Rate</small>
+							<big></big>
+						</li>
+						<li class="quantity">
+							<small>Quantity</small>
+							<big>1</big>
+						</li>
+						<li class="price">
+							<small>Price</small>
+							<big>$999</big>
+						</li>
+						<li class="total">
+							<small>Total</small>
+							<big>$999</big>
+						</li>
+					</ul>
+				</div>
+				<!--
+				<div class="preview-item hardware terminal clearfix">
+					<img src="css/images/products/terminal@2x.png" />
+					<h3 class="name">Square Terminal</h3>
+					<p class="comments">
+						$100 discount off Terminal like we discussed on the phone
+					</p>
+					<ul class="details clearfix">
+						<li class="quantity">
+							<small>Quantity</small>
+							<big>1</big>
+						</li>
+						<li class="price">
+							<small>Price</small>
+							<big>$199</big>
+						</li>
+						<li class="total">
+							<small>Total</small>
+							<big>$199</big>
+						</li>
+					</ul>
+				</div>
+				<div class="preview-item software square-point-of-sale clearfix">
+					<h3 class="name">
+						Square Point of Sale
+					</h3>
+					<p class="comments">
+						asdfasdf
+					</p>
+					<ul class="details clearfix">
+						<li class="rate">
+							<small>Rate</small>
+							<big>2.6% + 10&#162;</big>
+						</li>
+					</ul>
+				</div>
+				<div class="preview-item software square-payroll clearfix">
+					<h3 class="name">
+						Square Payroll
+					</h3>
+					<p class="comments">
+						asdfasdf
+					</p>
+					<ul class="details clearfix">
+						<li class="rate">
+							<small>Quantity</small>
+							<big>6 employees</big>
+						</li>
+						<li class="total">
+							<small>Total</small>
+							<big>$59 per month</big>
+						</li>
+					</ul>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
