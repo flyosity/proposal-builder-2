@@ -121,8 +121,10 @@ $(function() {
 		});
 
 		$clonedProposalItem.insertAfter($proposalItemOriginal);
-
 		$previewItemOriginal.clone().attr('id', 'preview-' + newID).insertAfter($previewItemOriginal);
+
+		// 
+
 	});
 
 	$(document).on('click', '.proposal-item button.remove', function() {
@@ -152,6 +154,7 @@ $(function() {
 	$(document).on('input', '.proposal-item li.half input[type=text]', function() {
 		var _id = $(this).parents('.proposal-item').attr('id'),
 			_preview_id = "preview-" + _id,
+			$proposalItem = $(this).parents('.proposal-item'),
 			value = this.value,
 			$match;
 
@@ -159,6 +162,46 @@ $(function() {
 		if ($(this).hasClass('quantity')) $match = $("#" + _preview_id + " li.quantity");
 		if ($(this).hasClass('price')) $match = $("#" + _preview_id + " li.price");
 		if ($(this).hasClass('total')) $match = $("#" + _preview_id + " li.total");
+
+		// If user is updating quantity or price, update the total. If they want to
+		// update the total manually, let them.
+		if ($(this).hasClass('quantity') || $(this).hasClass('price')) {
+			var $q = $proposalItem.find('input.quantity');
+			var $p = $proposalItem.find('input.price');
+			var $t = $proposalItem.find('input.total');
+
+			// alert("q val: " + $q.val());
+			// alert("p val: " + $p.val());
+			// alert("t val: " + $t.val());
+
+			var strippedPrice = $p.val().replace(/\D/g,'');
+			var strippedQuantity = $q.val().replace(/\D/g,'');
+			var strippedTotal = $t.val().replace(/\D/g,'');
+
+			// alert("q int: " + parseInt(strippedQuantity));
+			// alert("p int: " + parseInt(strippedPrice));
+			// alert("t int: " + parseInt(strippedTime));
+
+			// Update proposal item total
+			$proposalItem.find('input.total').val("$" + (strippedPrice * strippedQuantity));
+
+			// Update preview item total
+			$("#" + _preview_id + " li.total big").html("$" + (strippedPrice * strippedQuantity));
+
+
+
+			/*
+			var quantityInt = parseInt($proposalItem.find('input.quantity').val(), 10);
+			// alert(quantityInt);
+			alert(parseInt($proposalItem.find('input.price').val()));
+			*/
+
+			// var priceInt = parseInt($proposalItem.find('input.price').attr('value'), 10);
+			// alert(priceInt);
+			// var totalInt = quantityInt * priceInt;
+
+			// $proposalItem.find('input.total').val("$" + totalInt);
+		}
 
 		if (value.length == 0) {
 			$match.hide();
@@ -173,7 +216,8 @@ $(function() {
 			_id = $proposalItem.attr('id'),
 			_preview_id = "preview-" + _id,
 			value = this.value,
-			$match = $("#" + _preview_id);
+			$match = $("#" + _preview_id),
+			defaultPrice = "";
 
 		$proposalItem.find('h3.product-name').html(value);
 
@@ -225,21 +269,84 @@ $(function() {
 			$match.removeClass().addClass('preview-item software square-banking clearfix');
 			$match.find('img').hide();
 		} else if (value == "Square Register") {
+			defaultPrice = "$799";
 			$match.removeClass().addClass('preview-item hardware register clearfix');
 			$match.find('img').show().attr('src', 'css/images/products/register@2x.png');
 		} else if (value == "Square Terminal") {
+			defaultPrice = "$299";
 			$match.removeClass().addClass('preview-item hardware terminal clearfix');
 			$match.find('img').show().attr('src', 'css/images/products/terminal@2x.png');
 		} else if (value == "Square Stand") {
+			defaultPrice = "$149";
 			$match.removeClass().addClass('preview-item hardware stand clearfix');
 			$match.find('img').show().attr('src', 'css/images/products/stand@2x.png');
 		} else if (value == "Square Stand Mount") {
+			defaultPrice = "$149";
 			$match.removeClass().addClass('preview-item hardware stand-mount clearfix');
 			$match.find('img').show().attr('src', 'css/images/products/stand-mount@2x.png');
 		} else if (value == "Square Reader") {
+			defaultPrice = "$49";
 			$match.removeClass().addClass('preview-item hardware reader clearfix');
 			$match.find('img').show().attr('src', 'css/images/products/reader@2x.png');
 		}
+
+		// If new item has a price, reset the values within proposalItem
+		if (defaultPrice !== "") {
+			$proposalItem.find('input.quantity').val("1");
+			$proposalItem.find('input.price').val(defaultPrice);
+			$proposalItem.find('input.total').val(defaultPrice);
+
+			$match.find('li.quantity big').html("1");
+			$match.find('li.price big').html(defaultPrice);
+			$match.find('li.total big').html(defaultPrice);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	});
 
 
