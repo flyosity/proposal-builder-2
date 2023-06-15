@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="EON AI Tools" />
+    <meta name="author" content="Mike Rundle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/ai.css" />
+    <script type="text/javascript">
+
+
+
+    </script>
+    <script src="common.js"></script>
+    <script src="ai.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Conversation-Powered Onboarding <span>Interaction Simulator</span></h1>
+    </header>
+    <section class="mcc">
+        <h2>
+            Business Categorization
+        </h2>
+        <p class="explanation">
+            Enter a description of a hypothetical business below and then click <strong>Identify category</strong>
+            to generate potential business category matches and an AI-generated confidence level.
+        </p>
+        <textarea id="description"></textarea>
+        <div class="buttons">
+            <button class="identify-category">Identify category</button>
+        </div>
+        <div class="segmented" style="display: none;">
+            <a href="#" class="extended selected">Extended</a>
+            <a href="#" class="limited">Limited</a>
+        </div>
+
+        <div style="display: none;" id="spinner"><img src="css/images/Circles-menu-3.gif" /></div>
+
+        <div class="mcc-limited-output" style="display: none;">
+            <ul>
+                <li>
+                    <h5>Health Care</h5>
+                    <code>OTHER</code>
+                    <p class="rationale">
+                        The business owner provided lorem ipsum dolor sit amet.
+                    </p>
+                    <h6 class="confidence">90%</h6>
+                </li>
+                <li>
+                    <h5>Professional Services</h5>
+                    <code>OTHER</code>
+                    <p class="rationale">
+                        The business owner provides lorem ipsum dolor sit amet.
+                    </p>
+                    <h6 class="confidence">75%</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="mcc-output" style="display: none;">
+            <ul>
+                <li>
+                    <h5>Medical Services and Health Practitioners</h5>
+                    <code>MCC 8099</code>
+                    <p class="rationale">
+                        The business owner is a licensed physical therapist providing services to clients.
+                        This falls under health practitioners providing medical services.
+                    </p>
+                    <h6 class="confidence">Confidence: <span>90%</span></h6>
+                </li>
+                <li>
+                    <h5>Other Personal Services</h5>
+                    <code>MCC 7299</code>
+                    <p class="rationale">
+                        The business owner provides lorem ipsum dolor sit amet.
+                    </p>
+                    <h6 class="confidence">Confidence: <span>75%</span></h6>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="pw">
+        <h2>
+            Description Examples
+        </h2>
+        <p class="explanation">
+            Adjust the sliders below to simulate which pages on public web the hypothetical user has been
+            visiting recently. Sliders with no value indicate a page that this user hasn't visited, and sliders
+            with high values indicate pages that have been frequently visited.
+        </p>
+        <form id="sliders" class="clearfix">
+            <div class="slider-container">
+                <label for="online-store">Online Store</label>
+                <input name="online-store" type="range" min="0" max="100" value="0" class="slider" id="online-store" />
+            </div>
+            <div class="slider-container">
+                <label for="point-of-sale">Point of Sale</label>
+                <input name="point-of-sale" type="range" min="0" max="100" value="0" class="slider" id="point-of-sale" />
+            </div>
+            <div class="slider-container">
+                <label for="invoices">Invoices</label>
+                <input name="invoices" type="range" min="0" max="100" value="0" class="slider" id="invoices" />
+            </div>
+            <div class="slider-container">
+                <label for="virtual-terminal">Virtual Terminal</label>
+                <input name="virtual-terminal" type="range" min="0" max="100" value="0" class="slider" id="virtual-terminal" />
+            </div>
+            <div class="slider-container">
+                <label for="food-and-bev">Food and Beverage Overview</label>
+                <input name="food-and-bev" type="range" min="0" max="100" value="0" class="slider" id="food-and-bev" />
+            </div>
+            <div class="slider-container">
+                <label for="retail">Retail Overview</label>
+                <input name="retail" type="range" min="0" max="100" value="0" class="slider" id="retail" />
+            </div>
+        </form>
+        <div class="buttons">
+            <button class="generate-descriptions">Generate examples</button>
+        </div>
+        <div style="display: none;" id="spinner2"><img src="css/images/Circles-menu-3.gif" /></div>
+        <div class="pw-output" style="display: none;">
+            <ul>
+                <li>
+                    <p class="pw-example">
+                        I'm starting a new fitness studio and need a reliable and easy-to-use payment solution. I want to use
+                        Square to accept payments at my location and also send invoices for our special fitness programs.
+                    </p>
+                </li>
+                <li>
+                    <p class="pw-example">
+                        I'm starting a new fitness studio and need a reliable and easy-to-use payment solution. I want to use
+                        Square to accept payments at my location and also send invoices for our special fitness programs.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
