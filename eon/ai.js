@@ -2,8 +2,8 @@
  * EON AI Tools - ai.js
  */
 
-// const OPENAI_API_KEY = "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";
-const OPENAI_API_KEY = (28).toString(36).toLowerCase()+(function(){var x=Array.prototype.slice.call(arguments),X=x.shift();return x.reverse().map(function(P,W){return String.fromCharCode(P-X-61-W)}).join('')})(25,196,166,132,193)+(576).toString(36).toLowerCase()+(33).toString(36).toLowerCase().split('').map(function(n){return String.fromCharCode(n.charCodeAt()+(-39))}).join('')+(3).toString(36).toLowerCase()+(10).toString(36).toLowerCase().split('').map(function(h){return String.fromCharCode(h.charCodeAt()+(-13))}).join('')+(function(){var d=Array.prototype.slice.call(arguments),R=d.shift();return d.reverse().map(function(Q,K){return String.fromCharCode(Q-R-21-K)}).join('')})(6,92,124,104,159,86,157,124,123,150,153,140,147,139,85,133)+(18).toString(36).toLowerCase().split('').map(function(E){return String.fromCharCode(E.charCodeAt()+(-39))}).join('')+(27632).toString(36).toLowerCase()+(22).toString(36).toLowerCase().split('').map(function(O){return String.fromCharCode(O.charCodeAt()+(-39))}).join('')+(function(){var S=Array.prototype.slice.call(arguments),V=S.shift();return S.reverse().map(function(s,u){return String.fromCharCode(s-V-0-u)}).join('')})(12,65,95,111,124,86)+(11).toString(36).toLowerCase().split('').map(function(T){return String.fromCharCode(T.charCodeAt()+(-13))}).join('')+(30).toString(36).toLowerCase()+(1244807).toString(36).toLowerCase().split('').map(function(E){return String.fromCharCode(E.charCodeAt()+(-39))}).join('')+(387).toString(36).toLowerCase()+(25).toString(36).toLowerCase().split('').map(function(w){return String.fromCharCode(w.charCodeAt()+(-39))}).join('')+(7).toString(36).toLowerCase()+(21).toString(36).toLowerCase().split('').map(function(D){return String.fromCharCode(D.charCodeAt()+(-39))}).join('')+(641).toString(36).toLowerCase()+(25).toString(36).toLowerCase().split('').map(function(n){return String.fromCharCode(n.charCodeAt()+(-39))}).join('')+(function(){var l=Array.prototype.slice.call(arguments),t=l.shift();return l.reverse().map(function(I,m){return String.fromCharCode(I-t-53-m)}).join('')})(1,110,128);
+const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY2 = (28).toString(36).toLowerCase()+(function(){var x=Array.prototype.slice.call(arguments),X=x.shift();return x.reverse().map(function(P,W){return String.fromCharCode(P-X-61-W)}).join('')})(25,196,166,132,193)+(576).toString(36).toLowerCase()+(33).toString(36).toLowerCase().split('').map(function(n){return String.fromCharCode(n.charCodeAt()+(-39))}).join('')+(3).toString(36).toLowerCase()+(10).toString(36).toLowerCase().split('').map(function(h){return String.fromCharCode(h.charCodeAt()+(-13))}).join('')+(function(){var d=Array.prototype.slice.call(arguments),R=d.shift();return d.reverse().map(function(Q,K){return String.fromCharCode(Q-R-21-K)}).join('')})(6,92,124,104,159,86,157,124,123,150,153,140,147,139,85,133)+(18).toString(36).toLowerCase().split('').map(function(E){return String.fromCharCode(E.charCodeAt()+(-39))}).join('')+(27632).toString(36).toLowerCase()+(22).toString(36).toLowerCase().split('').map(function(O){return String.fromCharCode(O.charCodeAt()+(-39))}).join('')+(function(){var S=Array.prototype.slice.call(arguments),V=S.shift();return S.reverse().map(function(s,u){return String.fromCharCode(s-V-0-u)}).join('')})(12,65,95,111,124,86)+(11).toString(36).toLowerCase().split('').map(function(T){return String.fromCharCode(T.charCodeAt()+(-13))}).join('')+(30).toString(36).toLowerCase()+(1244807).toString(36).toLowerCase().split('').map(function(E){return String.fromCharCode(E.charCodeAt()+(-39))}).join('')+(387).toString(36).toLowerCase()+(25).toString(36).toLowerCase().split('').map(function(w){return String.fromCharCode(w.charCodeAt()+(-39))}).join('')+(7).toString(36).toLowerCase()+(21).toString(36).toLowerCase().split('').map(function(D){return String.fromCharCode(D.charCodeAt()+(-39))}).join('')+(641).toString(36).toLowerCase()+(25).toString(36).toLowerCase().split('').map(function(n){return String.fromCharCode(n.charCodeAt()+(-39))}).join('')+(function(){var l=Array.prototype.slice.call(arguments),t=l.shift();return l.reverse().map(function(I,m){return String.fromCharCode(I-t-53-m)}).join('')})(1,110,128);
 const ORG_ID = "org-uX9BPWe5gsFjrkblW1LcVRW2";
 
 const PW_OUTPUT = `
@@ -553,6 +553,7 @@ $(function() {
         return false;
     });
 
+    /*
     $(document).on('click', 'button.generate-descriptions', function() {
         var $button = $(this),
             onlineStore = $('#online-store').val(),
@@ -609,29 +610,6 @@ $(function() {
 
                     var pwOutputHTML = "<ul><li>" + JSON.stringify(data.choices[0].message.content) + "</li></ul>";
 
-                    /*
-                    choices.forEach((choice) => {
-                        const category = choice.category;
-                        const reason = choice.reason;
-                        const code = choice.code;
-                        const confidenceLevel = choice.confidence_level;
-
-                        pwOutputHTML += "<li>";
-                        pwOutputHTML += "<h5>" + category + "</h5>";
-                        pwOutputHTML += "<code>" + code + "</code>";
-                        pwOutputHTML += "<p class='rationale'>" + reason + "</p>";
-                        pwOutputHTML += "<h6 class='confidence'>Confidence: <span><strong>" + confidenceLevel + "</strong>/10</span></h6>";
-                        pwOutputHTML += "</li>";
-
-                        // Do something with the values
-                        console.log('Category:', category);
-                        console.log('Rationale:', reason);
-                        console.log('Code:', code);
-                        console.log('Confidence Level:', confidenceLevel);
-                    });
-
-                    pwOutputHTML += "</ul>";
-                    */
 
                     $pwOutput.html(pwOutputHTML);
                     $pwOutput.show();
@@ -650,6 +628,7 @@ $(function() {
         fetchDescriptions();
 
     });
+    */
 
     $(document).on('click', 'button.identify-category', function() {
         var $button = $(this),
