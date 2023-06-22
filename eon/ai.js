@@ -331,10 +331,14 @@ $(function() {
 
     var populate = function() {
         for (const key in pageData) {
-            $('body [data-match="' + key + '"]').each(function(index) {
+            $('body input[data-match="' + key + '"]').each(function(index) {
                 $(this).val(pageData[key]);
             });
         }
+    };
+
+    var clearOut = function() {
+        $('body *[data-match]').val('');
     };
 
     var navigateToPrototype = function(index) {
@@ -448,18 +452,21 @@ $(function() {
 
     $(document).on('click', 'a.exp-1', function() {
         pageData = {};
+        clearOut();
         navigateToPrototype(1);
         return false;
     });
 
     $(document).on('click', 'a.exp-2', function() {
         pageData = {};
+        clearOut();
         navigateToPrototype(2);
         return false;
     });
 
     $(document).on('click', 'a.exp-3', function() {
         pageData = {};
+        clearOut();
         navigateToPrototype(3);
         return false;
     });
