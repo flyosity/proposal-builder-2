@@ -1,0 +1,540 @@
+/**
+ * EON AI Tools - CSS
+ */
+
+:root{--square-sans-text:"Square Sans Text VF","Square Sans Text",helvetica,arial,sans-serif;--square-sans-display:"Square Sans Display VF","Square Sans Display",helvetica,arial,sans-serif}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.ttf") format("truetype");font-weight:600;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:auto}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Text VF";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Upright-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Upright-VF.woff2") format("woff2-variations");font-weight:400 700;font-style:normal;font-display:auto}}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Text VF";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic-VF.woff2") format("woff2-variations");font-weight:400 700;font-style:italic;font-display:auto}}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.ttf") format("truetype");font-weight:400;font-style:normal;font-stretch:75%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.ttf") format("truetype");font-weight:400;font-style:normal;font-stretch:125%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.ttf") format("truetype");font-weight:500;font-style:normal;font-stretch:75%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.ttf") format("truetype");font-weight:500;font-style:normal;font-stretch:125%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.ttf") format("truetype");font-weight:700;font-style:normal;font-stretch:25%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.woff") format("woff") url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.ttf") format("truetype");font-weight:700;font-style:normal;font-stretch:125%;font-display:auto}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Display VF";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-VF.woff2") format("woff2-variations");font-weight:400 700;font-stretch:75% 125%;font-style:normal;font-display:auto}}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, form, input, ul, ol, li, img, p, fieldset { padding: 0; margin: 0; }
+
+header, footer, section, aside, nav, article, figure { display: block; }
+
+:root {
+	--black: rgba(1,1,1,.9);
+	--blue: #006AFF;
+
+	/*font-synthesis: none;
+	font-smooth: always;
+	-moz-osz-font-smoothing: grayscale;
+	-webkit-font-smoothing: subpixel-antialiased;*/
+}
+
+/* darkest grey 151C1F */
+/* core grey 66717A */
+/* core grey light 939CA3 */
+/* core grey lighter D5D7D9 */
+/* super light rules E8EAEC */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0; }
+
+* html .clearfix { zoom: 1; }
+*:first-child+html .clearfix { zoom: 1; }
+
+html, body {
+	background: #fff;
+	padding: 0;
+	margin: 0;
+	font: 400 14px/1.5em var(--square-sans-text);
+	color: #151C1F; }
+
+		.buttons {
+			display: block;
+			margin-bottom: 36px;
+			height: 40px;
+			position: relative; }
+
+			.buttons button {
+				order:none;
+				background-image:none;
+				background-color:transparent;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				outline: none;
+				/* overrides */
+
+				display: block;
+				-webkit-font-smoothing: antialiased;
+				border: none;
+				height: 40px;
+				font-family: inherit;
+				font-weight: 600;
+				padding: 0 12px;
+				margin: 0;
+				border-radius: 6px;
+				font-size: 15px;
+				line-height: 40px;
+				transition: all 150ms ease-in-out;
+				text-align: center;
+				width: 100%;
+				color: #fff;
+				background: #006AFF; }
+
+				.buttons button:hover {
+					cursor: hand;
+					background: #005FE5; }
+
+		section ul {
+			padding: 0;
+			margin: 0;
+			list-style: none; }
+
+			section ul li {
+				padding: 0;
+				margin: 0;
+				border-left: 3px solid #8716D9;
+				padding-left: 24px; }
+
+				.pw-output li {
+					font-size: 18px;
+					line-height: 1.2em;
+					margin-bottom: 25px; }
+
+				section ul li h5 {
+					font-family: var(--square-sans-display);
+					font-weight: 300;
+					font-size: 18px;
+					line-height: 1em;
+					letter-spacing: 0.15px;
+					cursor: hand;
+					margin-bottom: 8px;
+					padding: 0;
+					margin: 0 0 6px 0; }
+
+				section ul li code {
+					color: rgba(0,0,0,0.6);
+					font-size: 16px; }
+
+				section ul li p.rationale {
+					padding-bottom: 0;
+					margin-bottom: 6px; }
+
+				section ul li h6 {
+					font-family: var(--square-sans-display);
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 1em;
+					letter-spacing: 0.15px;
+					color: rgba(0,0,0,.4);
+					padding: 0;
+					margin: 0 0 24px 0; }
+
+				section ul li.dropdown {
+					background: transparent url(images/caret@2x.png) 96% center no-repeat;
+					background-size: 16px 16px; }
+
+				section ul li select {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					text-indent: 1px;
+					text-overflow: '';
+
+					/* overrides */
+					-webkit-font-smoothing: antialiased;
+					width: 100%;
+					font-weight: 400;
+					font-family: inherit;
+					font-size: 16px;
+					padding: 9px 0 3px 0; }
+
+				section ul li textarea {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+
+					/* overrides */
+					margin-left: -2px;
+					text-indent: 0;
+					height: 70px;
+					font-weight: 400;
+					font-family: inherit;
+					font-size: 16px;
+					width: 100%;
+					line-height: 24px;
+					-webkit-font-smoothing: antialiased;
+					overflow: hidden;
+					resize: none; }
+
+				section ul li input[type="text"] {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+
+					/* overrides */
+					-webkit-font-smoothing: antialiased;
+					padding: 5px 0 2px 0;
+					font-weight: 400;
+					font-size: 16px;
+					width: 100%;
+					margin-bottom: -5px;
+					line-height: 24px; }
+
+				section ul li label {
+					display: block;
+					background: transparent;
+					-webkit-font-smoothing: antialiased;
+					font-size: 14px;
+					letter-spacing: -0.2px;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 14px;
+					padding: 0;
+					margin: 0 0 0 0; }
+
+		section h3 {
+			position: absolute;
+			top: 28px;
+			right: 0;
+			text-align: right;
+			padding: 0;
+			margin: 0;
+			font-family: var(--square-sans-text);
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 1em;
+			color: var(--black);
+			opacity: .5; }
+
+
+		section h2 {
+			font-family: var(--square-sans-display);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 1em;
+			letter-spacing: 0.15px;
+			cursor: hand;
+			margin-bottom: 8px; }
+
+			section h2 img {
+				transition: all 200ms ease-in-out;
+				position: relative;
+				top: 2px;
+				left: 2px;
+				opacity: .25; }
+
+				section h2 img.closed {
+					transform: rotate(180deg); }
+
+				section h2:hover img {
+					opacity: 1; }
+
+			section h2 + p {
+				margin-top: -6px; }
+
+		section p {
+			-webkit-font-smoothing: antialiased;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 22px;
+			padding: 0 0 11px 0;
+			margin: 0; }
+
+			section p.closed {
+				display: none; }
+
+	p.explanation {
+		font-size: 15px;
+		line-height: 21px;
+		padding: 0;
+		margin: 0 0 16px 0; }
+
+		p.explanation strong {
+			font-family: var(--square-sans-display);
+			font-weight: bold; }
+
+#sliders {
+	padding: 12px; }
+
+	#sliders .slider-container {
+		float: left;
+		display: block;
+		height: 64px;
+		width: 48%; }
+
+	#sliders .left {
+		width: 48%;
+		height: 48px; }
+
+	#sliders .right {
+		display: block;
+		position: absolute;
+		left: 51%;
+		height: 48px; }
+
+		#sliders label {
+			display: block;
+			background: transparent;
+			-webkit-font-smoothing: antialiased;
+			font-size: 14px;
+			letter-spacing: -0.2px;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 14px;
+			padding: 0;
+			margin: 0 0 5px 0; }
+
+		#sliders input.slider {
+			width: 90%; }
+
+
+
+
+#spinner, #spinner2 {
+	text-align: center; }
+
+	#spinner img, #spinner2 img {
+		opacity: .5;
+		width: 32px;
+		height: 32px; }
+
+.segmented {
+	display: block;
+	height: 48px;
+	margin-bottom: 36px;
+	border-radius: 6px;
+	background: rgba(0,0,0,0.05);
+	position: relative; }
+
+	.segmented a {
+		background: transparent;
+		display: block;
+		color: rgba(0,0,0,0.9);
+		text-decoration: none;
+		position: absolute;
+		text-align: center;
+		top: 4px;
+		left: 4px;
+		width: 49%;
+		bottom: 4px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 40px;
+		border-radius: 4px; }
+
+		.segmented a.limited {
+			right: 4px;
+			left: auto; }
+
+		.segmented a.selected {
+			background: #fff;
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1); }
+
+section {
+	position: absolute;
+	top: 56px;
+	padding: 24px;
+	padding-top: 46px;
+	background: #fff; }
+
+section.mcc {
+	border-right: 1px solid #E8EAEC;
+	left: 24px;
+	bottom: 0;
+	padding-right: 46px;
+	width: calc(50vw - 25px); }
+
+section.pw {
+	padding-left: 0;
+	right: 24px;
+	bottom: 0;
+	width: calc(50vw - 72px); }
+
+#description {
+	border:none;
+	background-image:none;
+	background-color:transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	outline: none;
+
+	/* overrides */
+	text-indent: 0;
+	height: 70px;
+	font-weight: 400;
+	font-family: inherit;
+	font-size: 16px;
+	width: 100%;
+	line-height: 24px;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	resize: none;
+	margin-bottom: 16px;
+	padding: 16px;
+	height: 180px;
+	border-radius: 6px;
+	border: 1px solid rgba(0, 0, 0, 0.15); }
+
+	#description:hover {
+		border-color: rgba(0,0,0,0.3); }
+
+	#description:focus {
+		border-color: var(--blue); }
+
+header {
+	z-index: 1000;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 56px;
+	background: #fff url(images/header-bg@2x.png) center center no-repeat no-repeat;
+	background-size: 390px 56px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.1); }
+
+	header h1 {
+		font-family: var(--square-sans-display);
+		-webkit-font-smoothing: antialiased;
+		text-indent: 16px;
+		letter-spacing: 0.15px;
+		padding: 0;
+		margin: 0;
+		height: 56px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 56px; }
+
+		header h1 span {
+			display: inline-block;
+			text-transform: uppercase;
+			opacity: .6;
+			color: #939CA3;
+			font-size: 13px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-thin.woff2") format("woff2");
+    font-weight: 100
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-thin-italic.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-light.woff2") format("woff2");
+    font-weight: 300
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-light-italic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-regular.woff2") format("woff2");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-regular-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-medium.woff2") format("woff2");
+    font-weight: 600
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-medium-italic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-bold.woff2") format("woff2");
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "Square Market";
+    font-display: block;
+    src: url("fonts/sqmarket-bold-italic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic
+}
+*/
