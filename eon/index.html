@@ -1,12 +1,25 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="EON AI Tools" />
+    <meta name="description" content="EON AI Prototype" />
     <meta name="author" content="Mike Rundle" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="css/ai.css" />
     <script type="text/javascript">
+
+        /**
+         * top all black internal link navigation
+         * which prototype, which page
+         * navigateToPrototype (no context, goes to 1st page blank)
+         * navigateToPageWithContext
+         * ^ data package JSON it will be expecting
+         * hide current, show specific new DIV
+         * 
+         * */
+
+
+
 
 
 
@@ -15,126 +28,330 @@
     <script src="ai.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Conversation-Powered Onboarding <span>Interaction Simulator</span></h1>
-    </header>
-    <section class="mcc">
-        <h2>
-            Business Categorization
-        </h2>
-        <p class="explanation">
-            Enter a description of a hypothetical business below and then click <strong>Identify category</strong>
-            to generate potential business category matches and an AI-generated confidence level.
-        </p>
-        <textarea id="description"></textarea>
-        <div class="buttons">
-            <button class="identify-category">Identify category</button>
-        </div>
-        <div class="segmented" style="display: none;">
-            <a href="#" class="extended selected">Extended</a>
-            <a href="#" class="limited">Limited</a>
-        </div>
+    <div id="spinner"><img style="width: 64px; height: 64px;" src="images/loading.gif" /></div>
+    <div id="internal-nav">
+        <a href="#" class="exp-1 exp">Experience #1</a>
+        <a href="#" class="exp-2 exp">Experience #2</a>
+        <a href="#" class="exp-3 exp">Experience #3</a>
+    </div>
 
-        <div style="display: none;" id="spinner"><img src="css/images/Circles-menu-3.gif" /></div>
+    <div id="exp-1" class="exp-container">
+        <div id="exp-1-page-1" class="exp-page exp-public-web">
+            <!-- public web -->
+            <div class="top-right-cover"></div>
+            <div class="top-right-buttons">
+                <button class="primary">Contact sales</button>
+                <button class="secondary">Get started</button>
+            </div>
+        </div>
+        <div id="exp-1-page-2" class="exp-page">
+            <!-- tell us about your business, free-form -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Let's get started</h4>
+                    <h2>Tell us about your business</h2>
+                    <h3>Every business is unique. We want to hear about yours.</h3>
+                    <ul class="fields">
+                        <li>
+                            <label>Describe your business</label>
+                            <textarea class="ai-input" data-match="ai-input" placeholder='Example: "Ribeye Palace is a popular local family-owned BBQ restaurant outside Tulsa, OK and I am Daz Jefferson the owner and operator. We don’t accept online orders and I’d like Square to handle this for me."'></textarea>
+                        </li>
+                    </ul>
+                    <p class="ai-explain">
+                        We want to suggest the right Square products for you, so please provide as much detail as you can.<br />You can use <strong>full sentences</strong> and <strong>natural language</strong> to describe your business.
+                    </p>
+                </div>
+            </div>
+            <div class="full-width-examples"></div>
+        </div>
+        <div id="exp-1-page-3" class="exp-page">
+            <!-- here's what we know, plus more fields -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Understanding your business</h4>
+                    <h2>Here's what we know so far</h2>
+                    <h3>Update any information that isn't correct.</h3>
+                    <ul class="fields">
+                        <li>
+                            <label>Business name</label>
+                            <input type="text" data-match="business-name" />
+                        </li>
+                        <li class="sub-text">
+                            Your business name is how we'll identify you on emails, receipts, and messages to customers.
+                        </li>
+                        <li>
+                            <label>Business category</label>
+                            <input type="text" data-match="category" />
+                        </li>
+                        <li class="sub-text">
+                            Make sure your category reflects the type of business you conduct.
+                        </li>
+                        <li class="dropdown">
+                            <label>Estimated annual revenue</label>
+                            <select data-match="annual-revenue">    
+                                <option selected="selected">Select...</option>
+                                <option>Under $50K</option>
+                                <option>$50K&ndash;100K</option>
+                                <option>$100K&ndash;250K</option>
+                                <option>Over $250K</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <span>I have a mobile business without a permanent physical location</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>Business address</label>
+                            <input type="text" data-match="address" />
+                        </li>
+                        <li>
+                            <label>Apt, suite, etc. (optional)</label>
+                            <input type="text" data-match="address-2" />
+                        </li>
+                        <li>
+                            <label>City</label>
+                            <input type="text" data-match="city" />
+                        </li>
+                        <li class="half" style="width: calc(50% - 16px); margin-right: 16px;">
+                            <label>State</label>
+                            <input type="text" data-match="state" />
+                        </li>
+                        <li class="half">
+                            <label>ZIP</label>
+                            <input type="text" data-match="zip" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="mcc-limited-output" style="display: none;">
-            <ul>
-                <li>
-                    <h5>Health Care</h5>
-                    <code>OTHER</code>
-                    <p class="rationale">
-                        The business owner provided lorem ipsum dolor sit amet.
-                    </p>
-                    <h6 class="confidence">90%</h6>
-                </li>
-                <li>
-                    <h5>Professional Services</h5>
-                    <code>OTHER</code>
-                    <p class="rationale">
-                        The business owner provides lorem ipsum dolor sit amet.
-                    </p>
-                    <h6 class="confidence">75%</h6>
-                </li>
-            </ul>
         </div>
-        <div class="mcc-output" style="display: none;">
-            <ul>
-                <li>
-                    <h5>Medical Services and Health Practitioners</h5>
-                    <code>MCC 8099</code>
-                    <p class="rationale">
-                        The business owner is a licensed physical therapist providing services to clients.
-                        This falls under health practitioners providing medical services.
+        <div id="exp-1-page-4" class="exp-page">
+            <!-- tell us how square can help, free-form -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Let's get started</h4>
+                    <h2>How can Square help you?</h2>
+                    <h3>We can help your business thrive. Describe what services and features you are interested in.</h3>
+                    <ul class="fields">
+                        <li>
+                            <label>How can we help?</label>
+                            <textarea class="ai-input" data-match="ai-input-services" placeholder='Example: "We currently don’t accept online orders and would like Square to help us provide that feature to our customers. Would like to learn more about loyalty programs as well."'></textarea>
+                        </li>
+                    </ul>
+                    <p class="ai-explain">
+                        We want to suggest the right Square products for you, so please provide as much detail as you can.<br />You can use <strong>full sentences</strong> and <strong>natural language</strong> to describe how Square can help you.
                     </p>
-                    <h6 class="confidence">Confidence: <span>90%</span></h6>
-                </li>
-                <li>
-                    <h5>Other Personal Services</h5>
-                    <code>MCC 7299</code>
-                    <p class="rationale">
-                        The business owner provides lorem ipsum dolor sit amet.
-                    </p>
-                    <h6 class="confidence">Confidence: <span>75%</span></h6>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <div class="full-width-examples-square"></div>
         </div>
-    </section>
-    <section class="pw">
-        <h2>
-            Description Examples
-        </h2>
-        <p class="explanation">
-            Adjust the sliders below to simulate which pages on public web the hypothetical user has been
-            visiting recently. Sliders with no value indicate a page that this user hasn't visited, and sliders
-            with high values indicate pages that have been frequently visited.
-        </p>
-        <form id="sliders" class="clearfix">
-            <div class="slider-container">
-                <label for="online-store">Online Store</label>
-                <input name="online-store" type="range" min="0" max="100" value="0" class="slider" id="online-store" />
+        <div id="exp-1-page-5" class="exp-page">
+            <!-- final payoff, here's what will work for BBQ restaurants -->
+            <div class="top-bar">
+                <h1>Square</h1>
             </div>
-            <div class="slider-container">
-                <label for="point-of-sale">Point of Sale</label>
-                <input name="point-of-sale" type="range" min="0" max="100" value="0" class="slider" id="point-of-sale" />
+            <div class="centered-content-container">
+                <button class="next">Done</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Payment software</h4>
+                    <h2>Here is the recommended payment software for your business</h2>
+                    <h3>We'll match you to the perfect payment product for your business.</h3>
+                    <img class="product-list" src="images/products.jpg" />
+                </div>
             </div>
-            <div class="slider-container">
-                <label for="invoices">Invoices</label>
-                <input name="invoices" type="range" min="0" max="100" value="0" class="slider" id="invoices" />
-            </div>
-            <div class="slider-container">
-                <label for="virtual-terminal">Virtual Terminal</label>
-                <input name="virtual-terminal" type="range" min="0" max="100" value="0" class="slider" id="virtual-terminal" />
-            </div>
-            <div class="slider-container">
-                <label for="food-and-bev">Food and Beverage Overview</label>
-                <input name="food-and-bev" type="range" min="0" max="100" value="0" class="slider" id="food-and-bev" />
-            </div>
-            <div class="slider-container">
-                <label for="retail">Retail Overview</label>
-                <input name="retail" type="range" min="0" max="100" value="0" class="slider" id="retail" />
-            </div>
-        </form>
-        <div class="buttons">
-            <button class="generate-descriptions">Generate examples</button>
         </div>
-        <div style="display: none;" id="spinner2"><img src="css/images/Circles-menu-3.gif" /></div>
-        <div class="pw-output" style="display: none;">
-            <ul>
-                <li>
-                    <p class="pw-example">
-                        I'm starting a new fitness studio and need a reliable and easy-to-use payment solution. I want to use
-                        Square to accept payments at my location and also send invoices for our special fitness programs.
-                    </p>
-                </li>
-                <li>
-                    <p class="pw-example">
-                        I'm starting a new fitness studio and need a reliable and easy-to-use payment solution. I want to use
-                        Square to accept payments at my location and also send invoices for our special fitness programs.
-                    </p>
-                </li>
-            </ul>
+    </div>
+
+    <div id="exp-2" class="exp-container">
+        <div id="exp-2-page-1" class="exp-page exp-public-web">
+            <!-- public web -->
+            <div class="top-right-cover"></div>
+            <div class="top-right-buttons">
+                <button class="primary">Contact sales</button>
+                <button class="secondary">Get started</button>
+            </div>
         </div>
-    </section>
+        <div id="exp-2-page-2" class="exp-page">
+            <!-- tell us about your business, mad libs side to side -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Let's get started</h4>
+                    <h2>Tell us about your business</h2>
+                    <h3>Every business is unique. We want to hear about yours.</h3>
+                    <div class="madlibs-about-fields">
+                        <input type="text" class="madlib-name" data-match="madlib-name" />
+                        <input type="text" class="madlib-type" data-match="madlib-type" />
+                        <input type="text" class="madlib-location" data-match="madlib-location" />
+                        <input type="text" class="madlib-love" data-match="madlib-love" />
+                    </div>
+                    <p class="ai-explain">
+                        We want to suggest the right Square products for you, so please provide as much detail as you can.<br />You can use <strong>full sentences</strong> and <strong>natural language</strong> to describe your business.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="exp-2-page-3" class="exp-page">
+            <!-- here's what we know, plus more fields -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Understanding your business</h4>
+                    <h2>Here's what we know so far</h2>
+                    <h3>Update any information that isn't correct.</h3>
+                    <ul class="fields">
+                        <li>
+                            <label>Business name</label>
+                            <input type="text" data-match="business-name" />
+                        </li>
+                        <li class="sub-text">
+                            Your business name is how we'll identify you on emails, receipts, and messages to customers.
+                        </li>
+                        <li>
+                            <label>Business category</label>
+                            <input type="text" data-match="category" />
+                        </li>
+                        <li class="sub-text">
+                            Make sure your category reflects the type of business you conduct.
+                        </li>
+                        <li class="dropdown">
+                            <label>Estimated annual revenue</label>
+                            <select data-match="annual-revenue">    
+                                <option selected="selected">Select...</option>
+                                <option>Under $50K</option>
+                                <option>$50K&ndash;100K</option>
+                                <option>$100K&ndash;250K</option>
+                                <option>Over $250K</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <span>I have a mobile business without a permanent physical location</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>Business address</label>
+                            <input type="text" data-match="address" />
+                        </li>
+                        <li>
+                            <label>Apt, suite, etc. (optional)</label>
+                            <input type="text" data-match="address-2" />
+                        </li>
+                        <li>
+                            <label>City</label>
+                            <input type="text" data-match="city" />
+                        </li>
+                        <li class="half" style="width: calc(50% - 16px); margin-right: 16px;">
+                            <label>State</label>
+                            <input type="text" data-match="state" />
+                        </li>
+                        <li class="half">
+                            <label>ZIP</label>
+                            <input type="text" data-match="zip" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="exp-2-page-4" class="exp-page">
+            <!-- tell us how square can help, mad libs side to side -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Next</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Let's get started</h4>
+                    <h2>How can Square help you?</h2>
+                    <h3>We can help your business thrive. Describe what services and features you are interested in.</h3>
+                    <div class="madlibs-how-fields">
+                        <input type="text" class="madlib-help" data-match="madlib-help" />
+                        <input type="text" class="madlib-payments" data-match="madlib-payments" />
+                        <input type="text" class="madlib-also" data-match="madlib-also" />
+                        <input type="text" class="madlib-else" data-match="madlib-else" />
+                    </div>
+                    <p class="ai-explain">
+                        We want to suggest the right Square products for you, so please provide as much detail as you can.<br />You can use <strong>full sentences</strong> and <strong>natural language</strong> to describe how Square can help you.
+                    </p>
+                </div>
+            </div>
+            <div class="full-width-examples-square"></div>
+        </div>
+        <div id="exp-2-page-5" class="exp-page">
+            <!-- final payoff, here's what will work for BBQ restaurants -->
+            <div class="top-bar">
+                <h1>Square</h1>
+            </div>
+            <div class="centered-content-container">
+                <button class="next">Done</button>
+                <button class="back">Back</button>
+                <div class="content">
+                    <h4>Payment software</h4>
+                    <h2>Here is the recommended payment software for your business</h2>
+                    <h3>We'll match you to the perfect payment product for your business.</h3>
+                    <img class="product-list" src="images/products.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="exp-3" class="exp-container">
+        <div id="exp-3-page-1" class="exp-page exp-public-web">
+            <!-- public web -->
+            exp 3 public web
+        </div>
+        <div id="exp-3-page-2" class="exp-page">
+            <!-- CURRENT tell us about your business -->
+            <br /><br />exp 3 current tell us
+        </div>
+        <div id="exp-2-page-3" class="exp-page">
+            <!-- CURRENT how can square help you row selection -->
+            <br /><br />exp 3 how can square help
+        </div>
+        <div id="exp-2-page-4" class="exp-page">
+            <!-- CURRENT how would you like to take payments -->
+            <br /><br />exp 3 how would you like to take payments
+        </div>
+        <div id="exp-2-page-5" class="exp-page">
+            <!-- CURRENT All vs Recommended cards MPO experience -->
+            <br /><br />exp 3 MPO product select
+        </div>
+        <div id="exp-2-page-6" class="exp-page">
+            <!-- you're all set to use Square, goodbye -->
+            <br /><br />exp 3 final payoff
+        </div>
+    </div>
+
 </body>
 </html>
 

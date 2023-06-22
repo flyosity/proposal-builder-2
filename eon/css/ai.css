@@ -1,5 +1,5 @@
 /**
- * EON AI Tools - CSS
+ * EON AI Prototype CSS
  */
 
 :root{--square-sans-text:"Square Sans Text VF","Square Sans Text",helvetica,arial,sans-serif;--square-sans-display:"Square Sans Display VF","Square Sans Display",helvetica,arial,sans-serif}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-SemiBoldItalic.ttf") format("truetype");font-weight:600;font-style:italic;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Text";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:auto}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Text VF";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Upright-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Upright-VF.woff2") format("woff2-variations");font-weight:400 700;font-style:normal;font-display:auto}}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Text VF";src:url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-text/SquareSansText-Italic-VF.woff2") format("woff2-variations");font-weight:400 700;font-style:italic;font-display:auto}}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularCondensed.ttf") format("truetype");font-weight:400;font-style:normal;font-stretch:75%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-RegularExpanded.ttf") format("truetype");font-weight:400;font-style:normal;font-stretch:125%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumCondensed.ttf") format("truetype");font-weight:500;font-style:normal;font-stretch:75%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-MediumExpanded.ttf") format("truetype");font-weight:500;font-style:normal;font-stretch:125%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.woff") format("woff"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldCondensed.ttf") format("truetype");font-weight:700;font-style:normal;font-stretch:25%;font-display:auto}@font-face{font-family:"Square Sans Display";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.woff2") format("woff2"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.woff") format("woff") url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-BoldExpanded.ttf") format("truetype");font-weight:700;font-style:normal;font-stretch:125%;font-display:auto}@supports (font-variation-settings:normal){@font-face{font-family:"Square Sans Display VF";src:url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-VF.woff2") format("woff2 supports variations"),url("https://square-fonts-production-f.squarecdn.com/square-display/SquareSansDisplay-VF.woff2") format("woff2-variations");font-weight:400 700;font-stretch:75% 125%;font-style:normal;font-display:auto}}
@@ -14,18 +14,14 @@ header, footer, section, aside, nav, article, figure { display: block; }
 :root {
 	--black: rgba(1,1,1,.9);
 	--blue: #006AFF;
+	--darkBlue: #005FE5;
+	--text20: rgba(1,1,1,.55);
 
 	/*font-synthesis: none;
 	font-smooth: always;
 	-moz-osz-font-smoothing: grayscale;
 	-webkit-font-smoothing: subpixel-antialiased;*/
 }
-
-/* darkest grey 151C1F */
-/* core grey 66717A */
-/* core grey light 939CA3 */
-/* core grey lighter D5D7D9 */
-/* super light rules E8EAEC */
 
 .clearfix:after {
 	visibility: hidden;
@@ -43,7 +39,457 @@ html, body {
 	padding: 0;
 	margin: 0;
 	font: 400 14px/1.5em var(--square-sans-text);
-	color: #151C1F; }
+	color: var(--black); }
+
+#exp-1-page-3 {
+	padding-bottom: 100px; }
+
+#spinner {
+	z-index: 2000;
+	display: none;
+	transform: scale(1.5, 1.5);
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: calc(50vh - 32px);
+	left: calc(50vw - 32px);
+	background: #000;
+	border-radius: 12px;
+	text-align: center; }
+
+.full-width-examples {
+	display: block;
+	margin: 48px 0 0 0;
+	padding: 0;
+	height: 536px;
+	background: #fff url(../images/free-form-examples-2.jpg) top center no-repeat;
+	background-size: 1212px 536px; }
+
+.full-width-examples-square {
+	display: block;
+	margin: 24px 0 0 0;
+	padding: 0;
+	height: 562px;
+	background: #fff url(../images/free-form-square.jpg) top center no-repeat;
+	background-size: 1254px 562px; }
+
+.centered-content-container {
+	position: relative;
+	padding-top: 80px;
+	margin: 0; }
+
+	.centered-content-container button.next, .centered-content-container button.back {
+		position: absolute;
+		cursor: hand;
+		order:none;
+		background-image:none;
+		background-color:transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		outline: none;
+		/* overrides */
+
+		display: block;
+		-webkit-font-smoothing: antialiased;
+		border: none;
+		height: 48px;
+		font-family: inherit;
+		font-weight: 600;
+		padding: 0 16px;
+		margin: 0;
+		border-radius: 6px;
+		font-size: 15px;
+		line-height: 40px;
+		transition: all 150ms ease-in-out;
+		text-align: center;
+		color: #fff;
+		background: var(--blue); }
+
+		.centered-content-container button.next {
+			top: 104px;
+			right: 24px; }
+
+		.centered-content-container button.back {
+			height: 48px;
+			width: 48px;
+			top: 104px;
+			left: 24px;
+			background: rgba(0,0,0,.05) url(../images/arrow-left.png) center center no-repeat;
+			background-size: 24px 24px;
+			text-indent: -9000px;
+			border: none; }
+
+		.centered-content-container button.next:hover {
+			cursor: hand;
+			background: var(--darkBlue); }
+
+	.centered-content-container .content {
+		display: block;
+		width: 688px;
+		margin: 0 auto; }
+
+		.madlibs-about-fields {
+			position: relative;
+			width: 688px;
+			height: 191px;
+			margin-bottom: 48px;
+			background: transparent url(../images/madlibs-about-your-business.png) top left no-repeat;
+			background-size: 688px 191px; }
+
+			.madlibs-about-fields input {
+				position: absolute;
+				border:none;
+				background-image:none;
+				background-color:transparent;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				outline: none;
+
+				/* overrides */
+
+				-webkit-font-smoothing: antialiased;
+				padding: 3px;
+				font-weight: 400;
+				font-family: inherit;
+				font-size: 16px;
+				line-height: 24px; }
+
+				.madlibs-about-fields input.madlib-name {
+					width: 353px;
+					top: -5px;
+					left: 334px; }
+
+				.madlibs-about-fields input.madlib-type {
+					width: 478px;
+					top: 50px;
+					left: 210px; }
+
+				.madlibs-about-fields input.madlib-location {
+					width: 471px;
+					top: 105px;
+					left: 216px; }
+
+				.madlibs-about-fields input.madlib-love {
+					width: 313px;
+					top: 160px;
+					left: 375px; }
+
+
+			.madlibs-how-fields {
+				position: relative;
+				width: 688px;
+				height: 191px;
+				margin-bottom: 48px;
+				background: transparent url(../images/madlibs-square-help.png) top left no-repeat;
+				background-size: 688px 191px; }
+
+				.madlibs-how-fields input {
+					position: absolute;
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+
+					/* overrides */
+
+					-webkit-font-smoothing: antialiased;
+					padding: 3px;
+					font-weight: 400;
+					font-family: inherit;
+					font-size: 16px;
+					line-height: 24px; }
+
+
+				.madlibs-how-fields input.madlib-help {
+					width: 440px;
+					top: -5px;
+					left: 248px; }
+
+				.madlibs-how-fields input.madlib-payments {
+					width: 387px;
+					top: 50px;
+					left: 301px; }
+
+				.madlibs-how-fields input.madlib-also {
+					width: 364px;
+					top: 105px;
+					left: 324px; }
+
+				.madlibs-how-fields input.madlib-else {
+					width: 313px;
+					top: 160px;
+					left: 373px; }
+
+		.content img.product-list {
+			width: 100%; }
+
+		.content h3 {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: var(--black);
+			padding: 0;
+			-moz-osz-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			margin: 0 0 40px 0; }
+
+		.content h2 {
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 115%;
+			color: var(--black);
+			font-family: var(--square-sans-display);
+			font-smooth: always;
+			-moz-osz-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			padding: 0;
+			margin: 0 0 23px 0; }
+
+		.content h4 {
+			font-weight: 400;
+			font-size: 16px;
+			color: var(--text20);
+			-moz-osz-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			padding: 75px 0 0 0;
+			margin: 0 0 20px 0; }
+
+		.content p.ai-explain {
+			padding: 0 0 0 24px;
+			color: var(--black);
+			-moz-osz-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			letter-spacing: -0.1px;
+			margin: 0;
+			background: transparent url(../images/wand.png) 0 3px no-repeat;
+			background-size: 15px 16px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 157%; }
+
+			.content p.ai-explain strong {
+				-webkit-font-smoothing: subpixel-antialiased;
+				font-weight: 600; }
+
+		.content ul {
+			padding: 0;
+			margin: 0;
+			list-style: none; }
+
+			.content ul li {
+				display: block;
+				transition: border 150ms ease-in-out;
+				border-radius: 6px;
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				padding: 13px 16px 11px 16px;
+				margin: 0 0 16px 0; }
+
+				.content ul li.half {
+					float: left;
+					width: 50%; }
+
+				.content ul li:hover {
+					border-color: rgba(0,0,0,0.3); }
+
+				.content ul li:has(*:focus) {
+					border-color: var(--blue); }
+
+				.content li.sub-text {
+					transition: none;
+					border-radius: 0;
+					border: 0;
+					padding: 0;
+					margin: -10px 0 20px 0;
+					-webkit-font-smoothing: antialiased;
+					font-size: 14px;
+					font-weight: 400;
+					color: var(--text20); }
+
+				.content li.checkbox {
+					border: 0;
+					font-weight: 500;
+					padding: 12px 0; }
+
+					.content li.checkbox span {
+						font-size: 16px;
+						padding-left: 12px; }
+
+				.content li.dropdown {
+					background: transparent url(images/caret@2x.png) 96% center no-repeat;
+					background-size: 16px 16px; }
+
+				.content ul li select {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					text-indent: 1px;
+					text-overflow: '';
+
+					/* overrides */
+					-webkit-font-smoothing: antialiased;
+					width: 100%;
+					font-weight: 400;
+					font-family: inherit;
+					font-size: 16px;
+					padding: 9px 0 3px 0; }
+
+				.content ul li textarea {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+
+					/* overrides */
+					margin-left: -2px;
+					text-indent: 0;
+					height: 70px;
+					font-weight: 400;
+					font-family: inherit;
+					font-size: 16px;
+					width: 100%;
+					line-height: 24px;
+					-webkit-font-smoothing: antialiased;
+					resize: none; }
+
+					.content ul li textarea.ai-input {
+						margin-top: 4px;
+						font-size: 18px;
+						height: 130px; }
+
+						.content ul li textarea.ai-input::placeholder {
+							color: rgba(0,0,0,.25); }
+
+				.content ul li input[type="text"] {
+					border:none;
+					background-image:none;
+					background-color:transparent;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+
+					/* overrides */
+					-webkit-font-smoothing: antialiased;
+					padding: 5px 0 2px 0;
+					font-weight: 400;
+					font-size: 16px;
+					width: 100%;
+					margin-bottom: -5px;
+					line-height: 24px; }
+
+				.content ul li label {
+					display: block;
+					background: transparent;
+					-webkit-font-smoothing: antialiased;
+					font-size: 14px;
+					letter-spacing: 0;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 14px;
+					padding: 0;
+					margin: 0 0 0 0; }
+
+.top-bar {
+	position: fixed;
+	z-index: 500;
+	top: 24px;
+	left: 0;
+	right: 0;
+	height: 56px;
+	background: rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(0,0,0,.05); }
+
+	.top-bar h1 {
+		display: block;
+		padding: 0;
+		margin: 0 0 0 16px;
+		font-size: 12px;
+		text-indent: -9000px;
+		width: 150px;
+		height: 56px;
+		background: transparent url(../images/square-logo.png) center left no-repeat;
+		background-size: 96px 24px; }
+
+.exp-public-web {
+	position: absolute;
+	top: 24px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #F7F7F7 url(../images/public-web.png) top center no-repeat;
+	background-size: 1421px 1244px; }
+
+	.exp-public-web .top-right-cover {
+		position: absolute;
+		top: 8px;
+		right: calc((100vw - 1421px)/2);
+		background: transparent url(../images/public-web-top-right.png) top left no-repeat;
+		background-size: 192px 52px;
+		width: 192px;
+		height: 52px; }
+
+	.exp-public-web .top-right-buttons {
+		position: absolute;
+		height: 48px;
+		width: 300px;
+		top: 169px;
+		right: calc((100vw - 1421px)/2 + 20px);
+		background: transparent; }
+
+
+#internal-nav {
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 24px;
+	background: #000;
+	text-align: center; }
+
+	#internal-nav a.exp {
+		text-transform: uppercase;
+		font-size: 11px;
+		text-decoration: none;
+		color: rgba(255,255,255,.35);
+		display: inline-block;
+		height: 24px;
+		line-height: 24px;
+		padding: 0 24px;
+		transition: all 150ms ease-in-out; }
+
+		#internal-nav a.exp.current {
+			color: rgba(255,255,255,.65); }
+
+		#internal-nav a.exp:hover {
+			color: #fff; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		.buttons {
 			display: block;
@@ -51,7 +497,8 @@ html, body {
 			height: 40px;
 			position: relative; }
 
-			.buttons button {
+			.buttons button, .top-right-buttons button {
+				cursor: hand;
 				order:none;
 				background-image:none;
 				background-color:transparent;
@@ -76,11 +523,26 @@ html, body {
 				text-align: center;
 				width: 100%;
 				color: #fff;
-				background: #006AFF; }
+				background: var(--blue); }
 
-				.buttons button:hover {
+				.top-right-buttons button {
+					margin-left: 16px;
+					width: auto;
+					height: 48px;
+					padding: 0 18px;
+					font-size: 16px;
+					font-weight: 500;
+					float: right; }
+
+
+				.top-right-buttons button.secondary {
+					background: #fff;
+					border: 1px solid var(--blue);
+					color: var(--blue); }
+
+				.buttons button:hover, .top-right-buttons button.primary:hover {
 					cursor: hand;
-					background: #005FE5; }
+					background: var(--darkBlue); }
 
 		section ul {
 			padding: 0;
@@ -92,6 +554,11 @@ html, body {
 				margin: 0;
 				border-left: 3px solid #8716D9;
 				padding-left: 24px; }
+
+				.pw-output li {
+					font-size: 18px;
+					line-height: 1.2em;
+					margin-bottom: 25px; }
 
 				section ul li h5 {
 					font-family: var(--square-sans-display);
@@ -260,135 +727,6 @@ html, body {
 			font-family: var(--square-sans-display);
 			font-weight: bold; }
 
-#sliders {
-	padding: 12px; }
-
-	#sliders .slider-container {
-		float: left;
-		display: block;
-		height: 64px;
-		width: 48%; }
-
-	#sliders .left {
-		width: 48%;
-		height: 48px; }
-
-	#sliders .right {
-		display: block;
-		position: absolute;
-		left: 51%;
-		height: 48px; }
-
-		#sliders label {
-			display: block;
-			background: transparent;
-			-webkit-font-smoothing: antialiased;
-			font-size: 14px;
-			letter-spacing: -0.2px;
-			font-weight: 600;
-			font-size: 14px;
-			line-height: 14px;
-			padding: 0;
-			margin: 0 0 5px 0; }
-
-		#sliders input.slider {
-			width: 90%; }
-
-
-
-
-#spinner, #spinner2 {
-	text-align: center; }
-
-	#spinner img, #spinner2 img {
-		opacity: .5;
-		width: 32px;
-		height: 32px; }
-
-.segmented {
-	display: block;
-	height: 48px;
-	margin-bottom: 36px;
-	border-radius: 6px;
-	background: rgba(0,0,0,0.05);
-	position: relative; }
-
-	.segmented a {
-		background: transparent;
-		display: block;
-		color: rgba(0,0,0,0.9);
-		text-decoration: none;
-		position: absolute;
-		text-align: center;
-		top: 4px;
-		left: 4px;
-		width: 49%;
-		bottom: 4px;
-		font-style: normal;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 40px;
-		border-radius: 4px; }
-
-		.segmented a.limited {
-			right: 4px;
-			left: auto; }
-
-		.segmented a.selected {
-			background: #fff;
-			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1); }
-
-section {
-	position: absolute;
-	top: 56px;
-	padding: 24px;
-	padding-top: 46px;
-	background: #fff; }
-
-section.mcc {
-	border-right: 1px solid #E8EAEC;
-	left: 24px;
-	bottom: 0;
-	padding-right: 46px;
-	width: calc(50vw - 25px); }
-
-section.pw {
-	padding-left: 0;
-	right: 24px;
-	bottom: 0;
-	width: calc(50vw - 72px); }
-
-#description {
-	border:none;
-	background-image:none;
-	background-color:transparent;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	outline: none;
-
-	/* overrides */
-	text-indent: 0;
-	height: 70px;
-	font-weight: 400;
-	font-family: inherit;
-	font-size: 16px;
-	width: 100%;
-	line-height: 24px;
-	-webkit-font-smoothing: antialiased;
-	overflow: hidden;
-	resize: none;
-	margin-bottom: 16px;
-	padding: 16px;
-	height: 180px;
-	border-radius: 6px;
-	border: 1px solid rgba(0, 0, 0, 0.15); }
-
-	#description:hover {
-		border-color: rgba(0,0,0,0.3); }
-
-	#description:focus {
-		border-color: var(--blue); }
 
 header {
 	z-index: 1000;
@@ -453,83 +791,3 @@ header {
 
 
 
-
-
-
-
-/*
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-thin.woff2") format("woff2");
-    font-weight: 100
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-thin-italic.woff2") format("woff2");
-    font-weight: 100;
-    font-style: italic
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-light.woff2") format("woff2");
-    font-weight: 300
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-light-italic.woff2") format("woff2");
-    font-weight: 300;
-    font-style: italic
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-regular.woff2") format("woff2");
-    font-weight: 400
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-regular-italic.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-medium.woff2") format("woff2");
-    font-weight: 600
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-medium-italic.woff2") format("woff2");
-    font-weight: 600;
-    font-style: italic
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-bold.woff2") format("woff2");
-    font-weight: 700
-}
-
-@font-face {
-    font-family: "Square Market";
-    font-display: block;
-    src: url("fonts/sqmarket-bold-italic.woff2") format("woff2");
-    font-weight: 700;
-    font-style: italic
-}
-*/
