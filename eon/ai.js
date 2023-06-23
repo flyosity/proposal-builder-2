@@ -8,314 +8,413 @@ const ORG_ID = "org-uX9BPWe5gsFjrkblW1LcVRW2";
 
 // Extended MCC match
 const TELL_US_ABOUT_YOUR_BUSINESS = `
-    You are going to act as a business assistant that can analyze a description of a business and extract information about it. You're going to do a great job! Businesses can be categorized with a Merchant Category Code (MCCs). Here is a full list of MCCs to reference:
+    You are going to act as a business assistant that can analyze a description of a business and extract information about it. You're going to do a great job! Businesses can be categorized with a Merchant Categories or the general type of business they are and what they do. Here is a full list of Merchant Categories for you to reference:
 
-    A/C, Refrigeration Repair   7623
-    Accounting/Bookkeeping Services 8931
-    Advertising Services    7311
-    Agricultural Cooperative    0763
-    Airlines, Air Carriers  4511
-    Airports, Flying Fields 4582
-    Ambulance Services  4119
-    Amusement Parks/Carnivals   7996
-    Antique Reproductions   5937
-    Antique Shops   5932
-    Aquariums   7998
-    Architectural/Surveying Services    8911
-    Art Dealers and Galleries   5971
-    Artists Supply and Craft Shops  5970
-    Auto Body Repair Shops  7531
-    Auto Paint Shops    7535
-    Auto Service Shops  7538
-    Auto and Home Supply Stores 5531
-    Automated Cash Disburse 6011
-    Automated Fuel Dispensers   5542
-    Automobile Associations 8675
-    Automotive Parts and Accessories Stores 5533
-    Automotive Tire Stores  5532
-    Bail and Bond Payments  9223
-    Bakeries    5462
-    Bands, Orchestras   7929
-    Barber and Beauty Shops 7230
-    Betting/Casino Gambling 7995
-    Bicycle Shops   5940
-    Billiard/Pool Establishments    7932
-    Boat Dealers    5551
-    Boat Rentals and Leases 4457
-    Book Stores 5942
-    Books, Periodicals, and Newspapers  5192
-    Bowling Alleys  7933
-    Bus Lines   4131
-    Business/Secretarial Schools    8244
-    Buying/Shopping Services    7278
-    Cable, Satellite, and Other Pay Television and Radio    4899
-    Camera and Photographic Supply Stores   5946
-    Candy, Nut, and Confectionery Stores    5441
-    Car Rental Agencies 7512
-    Car Washes  7542
-    Car and Truck Dealers (New & Used) Sales, Service, Repairs Parts and Leasing    5511
-    Car and Truck Dealers (Used Only) Sales, Service, Repairs Parts and Leasing 5521
-    Carpentry Services  1750
-    Carpet/Upholstery Cleaning  7217
-    Caterers    5811
-    Charitable and Social Service Organizations - Fundraising   8398
-    Chemicals and Allied Products (Not Elsewhere Classified)    5169
-    Child Care Services 8351
-    Childrens and Infants Wear Stores   5641
-    Chiropodists, Podiatrists   8049
-    Chiropractors   8041
-    Cigar Stores and Stands 5993
-    Civic, Social, Fraternal Associations   8641
-    Cleaning and Maintenance    7349
-    Clothing Rental 7296
-    Colleges, Universities  8220
-    Commercial Equipment (Not Elsewhere Classified) 5046
-    Commercial Footwear 5139
-    Commercial Photography, Art and Graphics    7333
-    Commuter Transport, Ferries 4111
-    Computer Network Services   4816
-    Computer Programming    7372
-    Computer Repair 7379
-    Computer Software Stores    5734
-    Computers, Peripherals, and Software    5045
-    Concrete Work Services  1771
-    Construction Materials (Not Elsewhere Classified)   5039
-    Consulting, Public Relations    7392
-    Correspondence Schools  8241
-    Cosmetic Stores 5977
-    Counseling Services 7277
-    Country Clubs   7997
-    Courier Services    4215
-    Court Costs, Including Alimony and Child Support - Courts of Law    9211
-    Credit Reporting Agencies   7321
-    Cruise Lines    4411
-    Dairy Products Stores   5451
-    Dance Hall, Studios, Schools    7911
-    Dating/Escort Services  7273
-    Dentists, Orthodontists 8021
-    Department Stores   5311
-    Detective Agencies  7393
-    Digital Goods Media – Books, Movies, Music  5815
-    Digital Goods – Applications (Excludes Games)   5817
-    Digital Goods – Games   5816
-    Digital Goods – Large Digital Goods Merchant    5818
-    Direct Marketing - Catalog Merchant 5964
-    Direct Marketing - Combination Catalog and Retail Merchant  5965
-    Direct Marketing - Inbound Telemarketing    5967
-    Direct Marketing - Insurance Services   5960
-    Direct Marketing - Other    5969
-    Direct Marketing - Outbound Telemarketing   5966
-    Direct Marketing - Subscription 5968
-    Direct Marketing - Travel   5962
-    Discount Stores 5310
-    Doctors 8011
-    Door-To-Door Sales  5963
-    Drapery, Window Covering, and Upholstery Stores 5714
-    Drinking Places 5813
-    Drug Stores and Pharmacies  5912
-    Drugs, Drug Proprietaries, and Druggist Sundries    5122
-    Dry Cleaners    7216
-    Durable Goods (Not Elsewhere Classified)    5099
-    Duty Free Stores    5309
-    Eating Places, Restaurants  5812
-    Educational Services    8299
-    Electric Razor Stores   5997
-    Electric Vehicle Charging   5552
-    Electrical Parts and Equipment  5065
-    Electrical Services 1731
-    Electronics Repair Shops    7622
-    Electronics Stores  5732
-    Elementary, Secondary Schools   8211
-    Emergency Services (GCAS) (Visa use only)   9702
-    Employment/Temp Agencies    7361
-    Equipment Rental    7394
-    Exterminating Services  7342
-    Family Clothing Stores  5651
-    Fast Food Restaurants   5814
-    Financial Institutions  6012
-    Fines - Government Administrative Entities  9222
-    Fireplace, Fireplace Screens, and Accessories Stores    5718
-    Floor Covering Stores   5713
-    Florists    5992
-    Florists Supplies, Nursery Stock, and Flowers   5193
-    Freezer and Locker Meat Provisioners    5422
-    Fuel Dealers (Non Automotive)   5983
-    Funeral Services, Crematories   7261
-    Furniture Repair, Refinishing   7641
-    Furniture, Home Furnishings, and Equipment Stores, Except Appliances    5712
-    Furriers and Fur Shops  5681
-    General Services    1520
-    Gift, Card, Novelty, and Souvenir Shops 5947
-    Glass, Paint, and Wallpaper Stores  5231
-    Glassware, Crystal Stores   5950
-    Golf Courses - Public   7992
-    Government Licensed On-line Casinos (On-Line Gambling)(US Region only)  7801
-    Government Services (Not Elsewhere Classified)  9399
-    Government-Licensed Horse/Dog Racing (US Region only)   7802
-    Government-Owned Lotteries (Non-US region)  9406
-    Government-Owned Lotteries (US Region only) 7800
-    Grocery Stores, Supermarkets    5411
-    Hardware Stores 5251
-    Hardware, Equipment, and Supplies   5072
-    Health and Beauty Spas  7298
-    Hearing Aids Sales and Supplies 5975
-    Heating, Plumbing, A/C  1711
-    Hobby, Toy, and Game Shops  5945
-    Home Supply Warehouse Stores    5200
-    Hospitals   8062
-    Hotels, Motels, and Resorts 7011
-    Household Appliance Stores  5722
-    Industrial Supplies (Not Elsewhere Classified)  5085
-    Information Retrieval Services  7375
-    Insurance - Default 6399
-    Insurance Underwriting, Premiums    6300
-    Intra-Company Purchases 9950
-    Jewelry Stores, Watches, Clocks, and Silverware Stores  5944
-    Landscaping Services    0780
-    Laundries   7211
-    Laundry, Cleaning Services  7210
-    Legal Services, Attorneys   8111
-    Luggage and Leather Goods Stores    5948
-    Lumber, Building Materials Stores   5211
-    Manual Cash Disburse    6010
-    Marinas, Service and Supplies   4468
-    Marketplaces    5262
-    Masonry, Stonework, and Plaster 1740
-    Massage Parlors 7297
-    Medical Services    8099
-    Medical and Dental Labs 8071
-    Medical, Dental, Ophthalmic, and Hospital Equipment and Supplies    5047
-    Membership Organizations    8699
-    Mens and Boys Clothing and Accessories Stores   5611
-    Mens, Womens Clothing Stores    5691
-    Metal Service Centers   5051
-    Miscellaneous Apparel and Accessory Shops   5699
-    Miscellaneous Auto Dealers  5599
-    Miscellaneous Business Services 7399
-    Miscellaneous Food Stores - Convenience Stores and Specialty Markets    5499
-    Miscellaneous General Merchandise   5399
-    Miscellaneous General Services  7299
-    Miscellaneous Home Furnishing Specialty Stores  5719
-    Miscellaneous Publishing and Printing   2741
-    Miscellaneous Recreation Services   7999
-    Miscellaneous Repair Shops  7699
-    Miscellaneous Specialty Retail  5999
-    Mobile Home Dealers 5271
-    Motion Picture Theaters 7832
-    Motor Freight Carriers and Trucking - Local and Long Distance, Moving and Storage Companies, and Local Delivery Services    4214
-    Motor Homes Dealers 5592
-    Motor Vehicle Supplies and New Parts    5013
-    Motorcycle Shops and Dealers    5571
-    Motorcycle Shops, Dealers   5561
-    Music Stores-Musical Instruments, Pianos, and Sheet Music   5733
-    News Dealers and Newsstands 5994
-    Non-FI, Money Orders    6051
-    Non-FI, Stored Value Card Purchase/Load 6540
-    Nondurable Goods (Not Elsewhere Classified) 5199
-    Nurseries, Lawn and Garden Supply Stores    5261
-    Nursing/Personal Care   8050
-    Office and Commercial Furniture 5021
-    Opticians, Eyeglasses   8043
-    Optometrists, Ophthalmologist   8042
-    Orthopedic Goods - Prosthetic Devices   5976
-    Osteopaths  8031
-    Package Stores-Beer, Wine, and Liquor   5921
-    Paints, Varnishes, and Supplies 5198
-    Parking Lots, Garages   7523
-    Passenger Railways  4112
-    Pawn Shops  5933
-    Pet Shops, Pet Food, and Supplies   5995
-    Petroleum and Petroleum Products    5172
-    Photo Developing    7395
-    Photographic Studios    7221
-    Photographic, Photocopy, Microfilm Equipment, and Supplies  5044
-    Picture/Video Production    7829
-    Piece Goods, Notions, and Other Dry Goods   5131
-    Plumbing, Heating Equipment, and Supplies   5074
-    Political Organizations 8651
-    Postal Services - Government Only   9402
-    Precious Stones and Metals, Watches and Jewelry 5094
-    Professional Services   8999
-    Public Warehousing and Storage - Farm Products, Refrigerated Goods, Household Goods, and Storage    4225
-    Quick Copy, Repro, and Blueprint    7338
-    Railroads   4011
-    Real Estate Agents and Managers - Rentals   6513
-    Record Stores   5735
-    Recreational Vehicle Rentals    7519
-    Religious Goods Stores  5973
-    Religious Organizations 8661
-    Roofing/Siding, Sheet Metal 1761
-    Secretarial Support Services    7339
-    Security Brokers/Dealers    6211
-    Service Stations    5541
-    Sewing, Needlework, Fabric, and Piece Goods Stores  5949
-    Shoe Repair/Hat Cleaning    7251
-    Shoe Stores 5661
-    Small Appliance Repair  7629
-    Snowmobile Dealers  5598
-    Special Trade Services  1799
-    Specialty Cleaning  2842
-    Sporting Goods Stores   5941
-    Sporting/Recreation Camps   7032
-    Sports Clubs/Fields 7941
-    Sports and Riding Apparel Stores    5655
-    Stamp and Coin Stores   5972
-    Stationary, Office Supplies, Printing and Writing Paper 5111
-    Stationery Stores, Office, and School Supply Stores 5943
-    Swimming Pools Sales    5996
-    TUI Travel - Germany    4723
-    Tailors, Alterations    5697
-    Tax Payments - Government Agencies  9311
-    Tax Preparation Services    7276
-    Taxicabs/Limousines 4121
-    Telecommunication Equipment and Telephone Sales 4812
-    Telecommunication Services  4814
-    Telegraph Services  4821
-    Tent and Awning Shops   5998
-    Testing Laboratories    8734
-    Theatrical Ticket Agencies  7922
-    Timeshares  7012
-    Tire Retreading and Repair  7534
-    Tolls/Bridge Fees   4784
-    Tourist Attractions and Exhibits    7991
-    Towing Services 7549
-    Trailer Parks, Campgrounds  7033
-    Transportation Services (Not Elsewhere Classified)  4789
-    Travel Agencies, Tour Operators 4722
-    Truck StopIteration 7511
-    Truck/Utility Trailer Rentals   7513
-    Typesetting, Plate Making, and Related Services 2791
-    Typewriter Stores   5978
-    U.S. Federal Government Agencies or Departments 9405
-    Uniforms, Commercial Clothing   5137
-    Used Merchandise and Secondhand Stores  5931
-    Utilities   4900
-    Variety Stores  5331
-    Veterinary Services 0742
-    Video Amusement Game Supplies   7993
-    Video Game Arcades  7994
-    Video Tape Rental Stores    7841
-    Vocational/Trade Schools    8249
-    Watch/Jewelry Repair    7631
-    Welding Repair  7692
-    Wholesale Clubs 5300
-    Wig and Toupee Stores   5698
-    Wires, Money Orders 4829
-    Womens Accessory and Specialty Shops    5631
-    Womens Ready-To-Wear Stores 5621
-    Wrecking and Salvage Yards  5935
+    A/C, Refrigeration Repair
+    Accounting/Bookkeeping Services
+    Advertising Services
+    Agricultural Cooperative
+    Airlines, Air Carriers
+    Airports, Flying Fields
+    Ambulance Services
+    Amusement Parks/Carnivals
+    Antique Reproductions
+    Antique Shops
+    Aquariums
+    Architectural/Surveying Services
+    Art Dealers and Galleries
+    Artists Supply and Craft Shops
+    Auto Body Repair Shops
+    Auto Paint Shops
+    Auto Service Shops
+    Auto and Home Supply Stores
+    Automated Cash Disburse
+    Automated Fuel Dispensers
+    Automobile Associations
+    Automotive Parts and Accessories Stores
+    Automotive Tire Stores
+    Bail and Bond Payments
+    Bakeries
+    Bands, Orchestras
+    Barber and Beauty Shops
+    Betting/Casino Gambling
+    Bicycle Shops
+    Billiard/Pool Establishments
+    Boat Dealers
+    Boat Rentals and Leases
+    Book Stores
+    Books, Periodicals, and Newspapers
+    Bowling Alleys
+    Bus Lines
+    Business/Secretarial Schools
+    Buying/Shopping Services
+    Cable, Satellite, and Other Pay Television and Radio
+    Camera and Photographic Supply Stores
+    Candy, Nut, and Confectionery Stores
+    Car Rental Agencies
+    Car Washes
+    Car and Truck Dealers (New & Used) Sales, Service, Repairs Parts and Leasing
+    Car and Truck Dealers (Used Only) Sales, Service, Repairs Parts and Leasing
+    Carpentry Services
+    Carpet/Upholstery Cleaning
+    Caterers
+    Charitable and Social Service Organizations - Fundraising
+    Chemicals and Allied Products (Not Elsewhere Classified)
+    Child Care Services
+    Childrens and Infants Wear Stores
+    Chiropodists, Podiatrists
+    Chiropractors
+    Cigar Stores and Stands
+    Civic, Social, Fraternal Associations
+    Cleaning and Maintenance
+    Clothing Rental
+    Colleges, Universities
+    Commercial Equipment (Not Elsewhere Classified)
+    Commercial Footwear
+    Commercial Photography, Art and Graphics
+    Commuter Transport, Ferries
+    Computer Network Services
+Computer Programming
+Computer Repair
+Computer Software Stores
+Computers, Peripherals, and Software
+Concrete Work Services
+Construction Materials (Not Elsewhere Classified)
+Consulting, Public Relations
+Correspondence Schools
+Cosmetic Stores
+Counseling Services
+Country Clubs
+Courier Services
+Court Costs, Including Alimony and Child Support - Courts of Law
+Credit Reporting Agencies
+Cruise Lines
+Dairy Products Stores
+Dance Hall, Studios, Schools
+Dating/Escort Services
+Dentists, Orthodontists
+Department Stores
+Detective Agencies
+Digital Goods Media – Books, Movies, Music
+Digital Goods – Applications (Excludes Games)
+Digital Goods – Games
+Digital Goods – Large Digital Goods Merchant
+Direct Marketing - Catalog Merchant
+Direct Marketing - Combination Catalog and Retail Merchant
+Direct Marketing - Inbound Telemarketing
+Direct Marketing - Insurance Services
+Direct Marketing - Other
+Direct Marketing - Outbound Telemarketing
+Direct Marketing - Subscription
+Direct Marketing - Travel
+    Discount Stores
+Doctors
+Door-To-Door Sales
+Drapery, Window Covering, and Upholstery Stores
+Drinking Places
+Drug Stores and Pharmacies
+Drugs, Drug Proprietaries, and Druggist Sundries
+Dry Cleaners
+Durable Goods (Not Elsewhere Classified)
+Duty Free Stores
+Eating Places, Restaurants
+Educational Services
+Electric Razor Stores
+Electric Vehicle Charging
+Electrical Parts and Equipment
+Electrical Services
+Electronics Repair Shops
+Electronics Stores
+Elementary, Secondary Schools
+Emergency Services (GCAS) (Visa use only)
+Employment/Temp Agencies
+Equipment Rental
+Exterminating Services
+Family Clothing Stores
+Fast Food Restaurants
+Financial Institutions
+Fines - Government Administrative Entities
+Fireplace, Fireplace Screens, and Accessories Stores
+Floor Covering Stores
+Florists
+    Florists Supplies, Nursery Stock, and Flowers
+Freezer and Locker Meat Provisioners
+Fuel Dealers (Non Automotive)
+Funeral Services, Crematories
+Furniture Repair, Refinishing
+Furniture, Home Furnishings, and Equipment Stores, Except Appliances
+Furriers and Fur Shops
+General Services
+Gift, Card, Novelty, and Souvenir Shops
+Glass, Paint, and Wallpaper Stores
+Glassware, Crystal Stores
+Golf Courses - Public
+Government Licensed On-line Casinos (On-Line Gambling)(US Region only)
+Government Services (Not Elsewhere Classified)
+Government-Licensed Horse/Dog Racing (US Region only)
+Government-Owned Lotteries (Non-US region)
+Government-Owned Lotteries (US Region only)
+Grocery Stores, Supermarkets
+Hardware Stores
+Hardware, Equipment, and Supplies
+Health and Beauty Spas
+Hearing Aids Sales and Supplies
+Heating, Plumbing, A/C
+Hobby, Toy, and Game Shops
+Home Supply Warehouse Stores
+Hospitals
+Hotels, Motels, and Resorts
+Household Appliance Stores
+Industrial Supplies (Not Elsewhere Classified)
+Information Retrieval Services
+Insurance - Default
+Insurance Underwriting, Premiums
+Intra-Company Purchases
+Jewelry Stores, Watches, Clocks, and Silverware Stores
+Landscaping Services
+Laundries
+Laundry, Cleaning Services
+Legal Services, Attorneys
+Luggage and Leather Goods Stores
+Lumber, Building Materials Stores
+Manual Cash Disburse
+Marinas, Service and Supplies
+Marketplaces
+Masonry, Stonework, and Plaster
+Massage Parlors
+Medical Services
+Medical and Dental Labs
+Medical, Dental, Ophthalmic, and Hospital Equipment and Supplies
+Membership Organizations
+Mens and Boys Clothing and Accessories Stores
+Mens, Womens Clothing Stores
+Metal Service Centers
+Miscellaneous Apparel and Accessory Shops
+Miscellaneous Auto Dealers
+Miscellaneous Business Services
+Miscellaneous Food Stores - Convenience Stores and Specialty Markets
+Miscellaneous General Merchandise
+Miscellaneous General Services
+Miscellaneous Home Furnishing Specialty Stores
+Miscellaneous Publishing and Printing
+Miscellaneous Recreation Services
+Miscellaneous Repair Shops
+Miscellaneous Specialty Retail
+Mobile Home Dealers
+Motion Picture Theaters
+Motor Freight Carriers and Trucking - Local and Long Distance, Moving and Storage Companies, and Local Delivery Services
+Motor Homes Dealers
+Motor Vehicle Supplies and New Parts
+Motorcycle Shops and Dealers
+Motorcycle Shops, Dealers
+Music Stores-Musical Instruments, Pianos, and Sheet Music
+News Dealers and Newsstands
+Non-FI, Money Orders
+Non-FI, Stored Value Card Purchase/Load
+Nondurable Goods (Not Elsewhere Classified)
+Nurseries, Lawn and Garden Supply Stores
+Nursing/Personal Care
+Office and Commercial Furniture
+Opticians, Eyeglasses
+Optometrists, Ophthalmologist
+Orthopedic Goods - Prosthetic Devices
+Osteopaths
+Package Stores-Beer, Wine, and Liquor
+Paints, Varnishes, and Supplies
+Parking Lots, Garages
+Passenger Railways
+Pawn Shops
+Pet Shops, Pet Food, and Supplies
+Petroleum and Petroleum Products
+Photo Developing
+Photographic Studios
+Photographic, Photocopy, Microfilm Equipment, and Supplies
+Picture/Video Production
+Piece Goods, Notions, and Other Dry Goods
+Plumbing, Heating Equipment,and Supplies
+Political Organizations
+Postal Services - Government Only
+Precious Stones and Metals, Watches and Jewelry
+Professional Services
+Public Warehousing and Storage - Farm Products, Refrigerated Goods, Household Goods, and Storage
+Quick Copy, Repro, and Blueprint
+Railroads
+Real Estate Agents and Managers - Rentals
+Record Stores
+Recreational Vehicle Rentals
+Religious Goods Stores
+Religious Organizations
+Roofing/Siding, Sheet Metal
+Secretarial Support Services
+Security Brokers/Dealers
+Service Stations
+Sewing, Needlework, Fabric, and Piece Goods Stores
+Shoe Repair/Hat Cleaning
+Shoe Stores
+Small Appliance Repair
+Snowmobile Dealers
+Special Trade Services
+Specialty Cleaning
+Sporting Goods Stores
+Sporting/Recreation Camps
+Sports Clubs/Fields
+Sports and Riding Apparel Stores
+Stamp and Coin Stores
+Stationary, Office Supplies, Printing and Writing Paper
+Stationery Stores, Office, and School Supply Stores
+Swimming Pools Sales
+TUI Travel - Germany
+Tailors, Alterations
+Tax Payments - Government Agencies
+Tax Preparation Services
+Taxicabs/Limousines
+    Telecommunication Equipment and Telephone Sales
+Telecommunication Services
+Telegraph Services
+Tent and Awning Shops
+Testing Laboratories
+Theatrical Ticket Agencies
+Timeshares
+Tire Retreading and Repair
+Tolls/Bridge Fees
+Tourist Attractions and Exhibits
+Towing Services
+Trailer Parks, Campgrounds
+Transportation Services (Not Elsewhere Classified)
+Travel Agencies, Tour Operators
+Truck StopIteration
+Truck/Utility Trailer Rentals
+Typesetting, Plate Making, and Related Services
+Typewriter Stores
+U.S. Federal Government Agencies or Departments
+Uniforms, Commercial Clothing
+Used Merchandise and Secondhand Stores
+Utilities
+Variety Stores
+Veterinary Services
+Video Amusement Game Supplies
+Video Game Arcades
+Video Tape Rental Stores
+Vocational/Trade Schools
+Watch/Jewelry Repair
+Welding Repair
+Wholesale Clubs
+Wig and Toupee Stores
+Wires, Money Orders
+Women's Accessory and Specialty Shops
+Women's Ready-To-Wear Stores
+Wrecking and Salvage Yards
+Augmented Reality Services
+Virtual Reality Arcades
+Esports Arenas and Organizers
+Digital Marketing Agencies
+Home Staging Services
+Indoor Gardening Stores
+Holistic Medicine Centers
+Nutrition Consulting Services
+Renewable Energy Equipment Suppliers
+E-commerce Platforms
+E-learning Platforms and Services
+Meal Prep Delivery Services
+Personal Fitness Trainers
+Urban Farming Suppliers
+Craft Brewing Supplies Stores
+Hydroponic Farming
+Drone Retailers and Repair Services
+3D Printing Services
+Cryptocurrency Consulting
+Eco-Friendly Cleaning Services
+Pet Training Services
+Ethical Fashion Retailers
+Upcycled Furniture Stores
+Personal Shopping Services
+Craft Workshop Spaces
+Podcast Production Services
+Artisanal Food Producers
+Mobile Veterinary Clinics
+Mobile Hair and Beauty Services
+Co-working Spaces
+Electric Scooter/Bike Rental Services
+Home Automation Services
+Health Food Stores
+Disaster Preparedness Stores
+Subscription Box Services
+Fair Trade Stores
+Organic Wine Sellers
+Green Building Material Suppliers
+Composting Services
+Telemedicine Services
+Indoor Cycling Studios
+Yoga Studios
+Plant-Based Restaurants
+Tea Shops
+Street Food Vendors
+Food Truck Manufacturers
+Vegan Cosmetics Stores
+Herbal Supplement Stores
+Home Organizing Services
+DIY Workshop and Tool Rental
+Floating Therapy Centers
+Aquaponics Suppliers
+Mobile App Development Firms
+Health and Wellness Retreats
+Refugee Support Organizations
+Water Conservation Consulting
+Solar Panel Installers
+Climate Control Systems Services
+Edible Landscaping Services
+Native Plant Nurseries
+Escape Room Businesses
+Sustainable Tourism Agencies
+Online Fitness Coaching
+Gluten-Free Bakeries
+Cultural Heritage Institutions
+Board Game Cafes
+Coworking Hotel
+Immersive Theater Companies
+Smart Home Installers
+Memory Care Centers
+E-scooter Repair Shops
+Custom Sneaker Designers
+Cloud Kitchen Restaurants
+AI Consultancy Services
+Bike Share Services
+Pet Grooming Salons
+Data Analysis Consultancy
+Coding Bootcamps
+Online Counseling Services
+Vintage Vinyl Records Stores
+Pop-up Restaurant Operators
+Green Burial Services
+Sustainable Investment Advisory
+Environmental Consulting Services
+Chatbot Development Companies
+Indoor Skydiving Centers
+Legal Tech Companies
+Virtual Assistant Services
+Independent Video Game Developers
+Cryptocurrency Mining Services
+Coworking Space for Artists
+Cybersecurity Consultancy
+Meditation Centers
+Energy Audit Services
+Gluten-Free Restaurants
+Urban Planning Consultancies
+Craft Distilleries
+Non-Profit Technology Solutions
+Smart City Solutions Providers
+Refugee Resettlement Services
 
-    Now that you have this context about Merchant Category Codes, please review what a
-    business owner has written about their business and select a single category that you
-    feel best categorizes this business. Do not worry about the numeric category code, only select the category description. Rate your confidence level from 1 to 10, where 1 is a low confidence category
-    selection and 10 is a high confidence category selection. Display your output as JSON using 'category' and 'confidence_level' as the keys.
+    Now that you have this context about Merchant Categories and a large list to refer to, please review what a
+    business owner has written to describe their business and select a single category from the list above that you
+    feel best categorizes this business and you have the highest confidence in that it's an accurate category. The name of the category you select will be inserted into a "category" key on your output format which I'll describe in a bit.
 
-    If the name of the business is mentioned, include what that name was as a "business-name" key. If a location is mentioned like a city or state, include those as "city" and "state" keys (convert the state to its 2-letter abbreviation and set that as the value of the "state" key). Only set values for "business-name", "city", and "state" if you are confident that the description included those details, otherwise do not set those keys.
+    If the business owner included the name of their business in the description below, include what that name was as a "business-name" key. If a location is mentioned like a city or state, include those as "city" and "state" keys. The "state" key should be a 2-letter abbreviation of the full state's name. Only set values for "business-name", "city", and "state" if you are confident that the description included those details.
 
-    Business description: `;
+    Business description:`;
 
 const TELL_US_PROMPT_FOOTER = `
-Remember to only respond with JSON output only using the keys I provided. Finish this output with your JSON: var values = `;
+ Given all you know from the previous list of merchant categories and the instructions above, genrate your output and remember to only respond with JSON output only using the keys I provided. Finish this output with your JSON: var values =`;
 
 var pageData = {};
 
@@ -345,6 +444,8 @@ $(function() {
         var exp1 = 'exp-1',
             exp2 = 'exp-2',
             exp3 = 'exp-3',
+            exp4 = 'exp-4',
+            exp5 = 'exp-5',
             targetExp;
 
         if (index == 1) {
@@ -353,8 +454,10 @@ $(function() {
             targetExp = exp2;
         } else if (index == 3) {
             targetExp = exp3;
-        } else {
-            return;
+        } else if (index == 4) {
+            targetExp = exp4;
+        } else if (index == 5) {
+            targetExp = exp5;
         }
 
         // Nav links
@@ -471,10 +574,24 @@ $(function() {
         return false;
     });
 
+    $(document).on('click', 'a.exp-4', function() {
+        pageData = {};
+        clearOut();
+        navigateToPrototype(4);
+        return false;
+    });
+
+    $(document).on('click', 'a.exp-5', function() {
+        pageData = {};
+        clearOut();
+        navigateToPrototype(5);
+        return false;
+    });
+
 
     // Jump straight into #1
     navigateToPrototypeFast(1);
-    // navigateToPageInPrototype(2, 3);
+    // navigateToPageInPrototype(2, 4);
 
     // Experience 2
     $(document).on('click', '#exp-2-page-1 .top-right-buttons button.secondary', function() {
@@ -501,7 +618,7 @@ $(function() {
         madLibCombined += pageData["madlib-type"];
 
         if (pageData["madlib-location"] !== null && pageData["madlib-location"] !== "") {
-            madLibCombined += " We are located in " + pageData["madlib-location"];
+            madLibCombined += ". Our business location is " + pageData["madlib-location"];
         }
 
         if (pageData["madlib-love"] !== null && pageData["madlib-love"] !== "") {
@@ -511,7 +628,7 @@ $(function() {
         // alert(madLibCombined);
         // return false;
 
-        var aiPrompt = TELL_US_ABOUT_YOUR_BUSINESS + madLibCombined + "\n" + TELL_US_PROMPT_FOOTER;
+        var aiPrompt = TELL_US_ABOUT_YOUR_BUSINESS + " " + madLibCombined + "\n" + TELL_US_PROMPT_FOOTER;
 
         console.log(aiPrompt);
 
@@ -604,7 +721,7 @@ $(function() {
             
         if (aiInput == "") { alert("Please enter a business description."); return; }
 
-        var aiPrompt = TELL_US_ABOUT_YOUR_BUSINESS + aiInput + "\n" + TELL_US_PROMPT_FOOTER;
+        var aiPrompt = TELL_US_ABOUT_YOUR_BUSINESS + " \"" + aiInput + "\"\n" + TELL_US_PROMPT_FOOTER;
 
         console.log(aiPrompt);
 

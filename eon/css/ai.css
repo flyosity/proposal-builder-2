@@ -61,17 +61,17 @@ html, body {
 	display: block;
 	margin: 48px 0 0 0;
 	padding: 0;
-	height: 536px;
-	background: #fff url(../images/free-form-examples-2.jpg) top center no-repeat;
-	background-size: 1212px 536px; }
+	height: 497px;
+	background: #fff url(../images/free-form-examples-ex.jpg) top center no-repeat;
+	background-size: 1154px 497px; }
 
 .full-width-examples-square {
 	display: block;
-	margin: 24px 0 0 0;
+	margin: 42px 0 0 0;
 	padding: 0;
-	height: 562px;
-	background: #fff url(../images/free-form-square.jpg) top center no-repeat;
-	background-size: 1254px 562px; }
+	height: 497px;
+	background: #fff url(../images/free-form-square-ex.jpg) top center no-repeat;
+	background-size: 1154px 497px; }
 
 .centered-content-container {
 	position: relative;
@@ -153,8 +153,11 @@ html, body {
 				padding: 3px;
 				font-weight: 400;
 				font-family: inherit;
-				font-size: 16px;
+				font-size: 18px;
 				line-height: 24px; }
+
+				.madlibs-about-fields input::placeholder {
+					color: rgba(0,0,0,.25); }
 
 				.madlibs-about-fields input.madlib-name {
 					width: 353px;
@@ -201,8 +204,11 @@ html, body {
 					padding: 3px;
 					font-weight: 400;
 					font-family: inherit;
-					font-size: 16px;
+					font-size: 18px;
 					line-height: 24px; }
+
+				.madlibs-how-fields input::placeholder {
+					color: rgba(0,0,0,.25); }
 
 
 				.madlibs-how-fields input.madlib-help {
