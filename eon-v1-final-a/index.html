@@ -1,0 +1,225 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="EON Conversational Onboarding V1 Prototype" />
+	<meta name="author" content="Mike Rundle" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/ai.css" />
+	<script src="common.js"></script>
+	<script src="ai.js"></script>    
+</head>
+<body>
+	<div id="spinner"><img style="width: 64px; height: 64px;" src="images/loading.gif" /></div>
+
+	<!-- Public Web -->
+	<div class="exp-public-web">
+		<div class="top-right-cover"></div>
+		<div class="top-right-buttons">
+			<button class="primary">Contact sales</button>
+			<button class="secondary get-started">Get started</button>
+		</div>
+	</div>
+
+	<!-- Account Create -->
+	<div class="exp-page account-create" style="display: none;">
+		<div class="top-bar">
+			<h1>Square</h1>
+		</div>
+		<div class="centered-content-container">
+			<!-- <button class="next">Next</button> -->
+			<button class="back">Back</button>
+			<div class="content">
+				<h2>Let's create your account</h2>
+				<h4>
+					Signing up for Square is fast and free.<br />
+					No commitments or long-term contracts.
+				</h4>
+
+				<ul class="fields">
+					<li>
+						<label>Enter your email</label>
+						<input type="text" data-match="email" />
+					</li>
+					<li>
+						<label>Confirm your email</label>
+						<input type="text" data-match="email-confirm" />
+					</li>
+					<li>
+						<label>Create a password</label>
+						<input type="password" data-match="password" />
+					</li>
+					<li class="dropdown">
+						<label>Locale</label>
+						<select data-match="locale">    
+							<option selected="selected">United States (English)</option>
+							<option>Other</option>
+						</select>
+					</li>
+				</ul>
+
+				<div class="terms-check">
+					<label for="terms-check">
+						<input type="checkbox" data-match="terms-check" id="terms-check" /> I agree to Square's <a href="#">Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">e-Sign Consent</a>.
+					</label>
+				</div>
+
+				<p class="site-protected">
+					This site is protected by reCAPTCHA Enterprise and the Google <a href="#">Privacy Policy</a> and 
+					<a href="#">Terms of Service</a> apply.
+				</p>
+
+				<button class="primary acct-continue">Continue</button>
+
+				<p class="already">
+					Already have a Square account? <a href="#">Sign in</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Square For You -->
+	<div class="exp-page square-for-you" style="display: none;">
+		<div class="top-bar">
+			<h1>Square</h1>
+		</div>
+		<div class="centered-content-container">
+			<button class="next disabled">Next</button>
+			<button class="back">Back</button>
+			<div class="content">
+				<h2>Square just for you</h2>
+				<h4>
+					Help us understand your business so we can get you started faster
+					and recommend the right Square products for you.
+				</h4>
+
+				<ul class="fields">
+					<li class="focus">
+						<label>Describe your business</label>
+						<textarea class="ai-input" data-match="ai-input" placeholder='Example: "Thai Lotus is an authentic full-service Thai restaurant in Tampa, FL"'></textarea>
+					</li>
+				</ul>
+				<p class="ai-explain">
+					What you type will be used to make <strong>product recommendations</strong>
+					and fill-in additional details
+				</p>
+			</div>
+		</div>
+		<div class="quote-examples">
+			<div class="quote hair-bar initial">"Hair Bar is a hair salon and coloring studio"</div>
+			<div class="quote jalisco initial">"Taqueria Jalisco is an authentic Mexican restaurant with a friendly atmosphere"</div>
+			<div class="quote apex initial">"Apex Ink is a modern tattoo shop in Oakland with 6 employees"</div>
+			<div class="quote sleek initial">"Sleek Styles is a family owned barbershop and we just added a 2nd location"</div>
+		</div>
+	</div>
+
+	<!-- Confirm Details -->
+	<div class="exp-page confirm-details" style="display: none;">
+		<div class="top-bar">
+			<h1>Square</h1>
+		</div>
+		<div class="centered-content-container">
+			<button class="next">Next</button>
+			<button class="back">Back</button>
+			<div class="content">
+				<h2>Confirm some final details</h2>
+				<h4>
+					Please review fields we pre-filled based on information<br />you told us so far.
+				</h4>
+				<ul class="fields">
+					<li class="dropdown">
+						<label>What kind of business are you?</label>
+						<select data-match="irs-type">    
+							<option>Select...</option>
+							<option selected="selected">Individual / Sole Proprietorship</option>
+							<option>Limited Liability Company (LLC)</option>
+							<option>Private Company</option>
+							<option>Public Company (Unlisted)</option>
+							<option>Charitable organization / Not-for-profit</option>
+							<option>Partnership</option>
+							<option>Other</option>
+						</select>
+					</li>
+					<li class="info">
+						<label>What is your business name?</label>
+						<input type="text" data-match="business-name" />
+					</li>
+					<li class="sub-text">
+						Your business name is how we'll identify you on emails, receipts, and messages to customers.
+					</li>
+					<li class="category-input focus">
+						<label>Business category</label>
+						<input value="Food and Beverage, Table Service Restaurant" class="category-search-input" type="text" data-match="category" />
+					</li>
+					<li class="info">
+						<label>Preferred phone number</label>
+						<input type="text" data-match="phone-number" />
+					</li>
+					<li class="sub-text">
+						We'll use this number to call you if needed. We don't sell your information to third parties.
+					</li>
+					<li class="dropdown">
+						<label>How many employees?</label>
+						<select data-match="employees">    
+							<option selected="selected">Just me</option>
+							<option>1-10 employees</option>
+							<option>11-50 employees</option>
+							<option>51-100 employees</option>
+							<option>More than 100 employees</option>
+						</select>
+					</li>
+					<li class="dropdown">
+						<label>Estimated annual revenue</label>
+						<select data-match="annual-revenue">    
+							<option selected="selected">Select...</option>
+							<option>Under $50K</option>
+							<option>$50K&ndash;100K</option>
+							<option>$100K&ndash;250K</option>
+							<option>Over $250K</option>
+							<option>Not sure yet</option>
+						</select>
+					</li>
+				</ul>
+
+				<div class="terms-check" style="padding-bottom: 32px;">
+					<label for="mobile-business">
+						<input type="checkbox" data-match="mobile-business" id="mobile-business" />
+						<strong>I have a mobile business without a permanent physical location</strong>
+					</label>
+				</div>
+
+				<ul class="fields" id="address" style="padding-bottom: 200px;">
+					<li>
+						<label>Address</label>
+						<input data-match="address" type="text" />
+					</li>
+					<li>
+						<label>Apt, suite, etc. (Optional)</label>
+						<input data-match="apt" type="text" />
+					</li>
+					<li>
+						<label>City</label>
+						<input data-match="city" type="text" />
+					</li>
+					<li class="half" style="width: calc(50% - 16px); margin-right: 16px;">
+						<label>State</label>
+						<input type="text" data-match="state" />
+					</li>
+					<li class="half">
+						<label>ZIP</label>
+						<input type="text" data-match="zip" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
