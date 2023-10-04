@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Flairity</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="flairity desc here" name="description">
+    <meta content="flairity card title here" property="og:title">
+    <meta content="flairity desc here" property="og:description">
+    <meta content="flairity large image here" property="og:image">
+    <meta content="flairity twitter card title here" property="twitter:title">
+    <meta content="flairity twitter desc here" property="twitter:description">
+    <meta content="flairity twitter image here" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;600&display=swap" rel="stylesheet">
+
+    <link href="flairity3.css" rel="stylesheet" type="text/css">
+
+    
+</head>
+<body class="disconnected">
+    <header>
+        <h1>Flairity</h1>
+        <a class="connect-button" href="#"><span class="icon"></span>Connect</a>
+        <a class="connected-button" href="#"><span class="icon"></span>Connected</a>
+    </header>
+
+    <div class="centered-ftu">
+        <img src="hero-cropped@2x.png" class="hero-text" alt="Let your followers know you're on Friend.tech with an augmented avatar powered by Flairity" />
+        <img src="connect-pics@2x.png" class="connect-pics" alt="Twitter and X" />
+        <div class="connect-account-container">
+            <a class="connect-acct-button" href="#">Connect your account</a>
+        </div>
+    </div>
+
+    <div class="icon-bar">
+        <h3>
+            Click icons to add to your image. Drag to reposition.
+        </h3>
+        <a href="#" class="icon-button blue" src="blue-ears.png">Blue FT Ears</a>
+        <a href="#" class="icon-button green" src="green-ears.png">Green FT Ears</a>
+        <a href="#" class="icon-button gold" src="gold-ears.png">Gold FT Ears</a>
+    </div>
+
+    <div class="pic-well">
+        <input type="file" id="image-upload" accept="image/*" />
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+
+    <div class="pic-actions">
+        <a class="reset-button" href="#"><span class="icon"></span>Reset</a>
+        <a class="save-button" href="#"><span class="icon"></span>Download</a>
+    </div>    
+
+
+
+    <!--
+    <input type="file" id="image-upload" accept="image/*">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div id="icons">
+        <img src="icon-crown.png" class="icon" alt="Icon 1">
+        <img src="icon-white.png" class="icon" alt="Icon 2">
+        <img src="icon-blue.png" class="icon" alt="Icon 3">
+    </div>
+    <button id="download">Download Image</button>
+    -->
+    <!-- <script src="script.js"></script> -->
+
+    <script src="script.js"></script> 
+</body>
+</html>
